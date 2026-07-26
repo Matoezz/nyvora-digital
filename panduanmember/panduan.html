@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panduan Memulai — Nyvora Digital</title>
+  <meta name="description" content="Panduan langkah demi langkah untuk memanfaatkan Starter Pack Bisnis Digital dari Nyvora Digital." />
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== SCROLL PROGRESS BAR ==================== -->
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <!-- Brand -->
+      <a href="#top" class="brand">
+        <span class="brand__mark">
+          <img src="../assets/putih.png" alt="" class="brand__logo-img" />
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Nyvora</span>
+          <span class="brand__suffix">Digital</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="navbar__links" aria-label="Navigasi utama">
+        <a href="../dashboard/dashboard.html" class="navbar__link">
+          <i data-lucide="layout-grid"></i> Dashboard
+        </a>
+        <a href="../products/index.html#produk" class="navbar__link">
+          <i data-lucide="package"></i> Produk
+        </a>
+        <a href="../bonus/bonus.html#produk" class="navbar__link">
+          <i data-lucide="gift"></i> Bonus
+        </a>
+        <a href="#top" class="navbar__link is-active">
+          <i data-lucide="book-open"></i> Panduan
+        </a>
+        <a href="../support/support.html" class="navbar__link">
+          <i data-lucide="life-buoy"></i> Support
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="navbar__actions">
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../dashboard/dashboard.html" class="mobile-menu__link"><i data-lucide="layout-grid"></i> Dashboard</a>
+      <a href="../products/index.html#produk" class="mobile-menu__link"><i data-lucide="package"></i> Produk</a>
+      <a href="../bonus/bonus.html#produk" class="mobile-menu__link"><i data-lucide="gift"></i> Bonus</a>
+      <a href="#top" class="mobile-menu__link mobile-menu__link--accent"><i data-lucide="book-open"></i> Panduan</a>
+      <a href="../support/support.html" class="mobile-menu__link"><i data-lucide="life-buoy"></i> Support</a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="top">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--a" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--b" aria-hidden="true"></div>
+    <div class="shell hero__inner">
+      <span class="hero__eyebrow">
+        <i data-lucide="compass"></i>
+        Dokumentasi Member
+      </span>
+      <h1 class="hero__title">📖 Panduan Memulai</h1>
+      <p class="hero__subtitle">
+        Pelajari langkah demi langkah untuk memanfaatkan Starter Pack Bisnis Digital
+        dengan lebih maksimal.
+      </p>
+      <div class="hero__meta">
+        <span><i data-lucide="clock"></i> ± 8 menit membaca</span>
+        <span><i data-lucide="list-ordered"></i> 11 bagian panduan</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE BODY ==================== -->
+  <div class="shell page">
+    <div class="page__grid">
+
+      <!-- ==================== MAIN CONTENT ==================== -->
+      <main class="content">
+
+        <!-- SECTION 1 -->
+        <article class="doc-card reveal" id="selamat-datang" data-title="Selamat Datang">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--blue"><i data-lucide="hand"></i></span>
+            <h2>👋 Selamat Datang</h2>
+          </div>
+          <div class="doc-card__body">
+            <p>
+              Selamat datang di Member Area Nyvora Digital! Siapa pun kamu hari ini —
+              seorang pelajar, mahasiswa, karyawan, atau baru pertama kali mendengar
+              istilah "bisnis digital" — kamu berada di tempat yang tepat.
+            </p>
+            <p>
+              Setiap orang yang sukses hari ini juga pernah memulai dari titik nol.
+              Tidak ada yang langsung mahir. Jadi tidak perlu terburu-buru, tidak perlu
+              membandingkan progresmu dengan orang lain. Panduan ini disusun agar kamu
+              bisa berjalan selangkah demi selangkah, dengan tenang dan terarah.
+            </p>
+          </div>
+        </article>
+
+        <!-- SECTION 2 -->
+        <article class="doc-card reveal" id="sebelum-memulai" data-title="Sebelum Memulai">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--violet"><i data-lucide="book-open-check"></i></span>
+            <h2>📖 Sebelum Memulai</h2>
+          </div>
+          <div class="doc-card__body">
+            <p>
+              Sebagian besar member yang bergabung di sini punya latar belakang yang
+              mirip. Kamu mungkin merasa relate dengan salah satunya:
+            </p>
+            <ul class="check-list">
+              <li><i data-lucide="check"></i> Masih berstatus pelajar atau mahasiswa</li>
+              <li><i data-lucide="check"></i> Benar-benar baru mengenal dunia bisnis digital</li>
+              <li><i data-lucide="check"></i> Belum pernah menghasilkan uang secara online</li>
+              <li><i data-lucide="check"></i> Masih bingung harus mulai dari mana</li>
+            </ul>
+            <p>
+              Kalau salah satu poin di atas menggambarkan dirimu, itu wajar — dan itu
+              justru alasan panduan ini dibuat. Pelajari materi secara bertahap, jangan
+              paksakan diri menguasai semuanya dalam satu hari. Progres kecil yang
+              konsisten jauh lebih berarti daripada semangat sesaat.
+            </p>
+          </div>
+        </article>
+
+        <!-- SECTION 3 -->
+        <article class="doc-card reveal" id="langkah-1" data-title="Langkah 1 — Jelajahi Paket">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--blue"><i data-lucide="compass"></i></span>
+            <h2>🧭 Langkah 1</h2>
+          </div>
+          <div class="doc-card__body">
+            <p class="doc-card__lead">Jelajahi isi paket terlebih dahulu.</p>
+            <p>
+              Sebelum mengambil tindakan apa pun, luangkan waktu untuk membuka dan
+              melihat-lihat seluruh isi Starter Pack. Kenali produk, bonus, dan panduan
+              yang tersedia di dashboard member. Memahami "peta" isi paket akan membuat
+              langkah-langkah berikutnya terasa jauh lebih mudah diikuti.
+            </p>
+          </div>
+        </article>
+
+        <!-- SECTION 4 -->
+        <article class="doc-card reveal" id="langkah-2" data-title="Langkah 2 — Tentukan Tujuan">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--amber"><i data-lucide="target"></i></span>
+            <h2>🎯 Langkah 2</h2>
+          </div>
+          <div class="doc-card__body">
+            <p class="doc-card__lead">Tentukan tujuanmu.</p>
+            <p>
+              Setiap orang punya alasan berbeda saat memulai — ada yang ingin
+              penghasilan tambahan, ada yang sekadar ingin belajar skill baru, dan ada
+              juga yang ingin membangun bisnis jangka panjang. Tidak ada satu jalan
+              yang benar untuk semua orang. Luangkan waktu sejenak untuk memikirkan,
+              "Apa yang sebenarnya ingin aku capai dari sini?" Jawaban itu akan menjadi
+              kompas yang menuntun langkahmu selanjutnya.
+            </p>
+          </div>
+        </article>
+
+        <!-- SECTION 5 -->
+        <article class="doc-card reveal" id="langkah-3" data-title="Langkah 3 — Pilih Satu Produk">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--violet"><i data-lucide="package"></i></span>
+            <h2>📦 Langkah 3</h2>
+          </div>
+          <div class="doc-card__body">
+            <p class="doc-card__lead">Pilih satu produk terlebih dahulu.</p>
+            <p>
+              Dengan banyaknya materi di dalam paket, wajar jika kamu merasa ingin
+              mempelajari semuanya sekaligus. Namun cara paling efektif adalah
+              memilih satu produk untuk difokuskan lebih dulu. Selesaikan dan pahami
+              satu hal dengan baik sebelum berpindah ke produk berikutnya — fokus
+              akan membawamu lebih jauh daripada mencoba semuanya setengah-setengah.
+            </p>
+          </div>
+        </article>
+
+        <!-- SECTION 6 -->
+        <article class="doc-card reveal" id="langkah-4" data-title="Langkah 4 — Pelajari Produk">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--blue"><i data-lucide="library-big"></i></span>
+            <h2>📚 Langkah 4</h2>
+          </div>
+          <div class="doc-card__body">
+            <p class="doc-card__lead">Pelajari produk sebelum digunakan.</p>
+            <p>
+              Setelah menentukan produk yang ingin difokuskan, pelajari materinya
+              secara menyeluruh sebelum mulai menerapkannya. Baca atau tonton dengan
+              saksama, catat bagian-bagian penting, dan pastikan kamu benar-benar
+              memahami konsepnya. Pemahaman yang kuat di awal akan membuat proses
+              eksekusi jauh lebih lancar.
+            </p>
+          </div>
+        </article>
+
+        <!-- SECTION 7 -->
+        <article class="doc-card reveal" id="langkah-5" data-title="Langkah 5 — Mulai Mencoba">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--amber"><i data-lucide="lightbulb"></i></span>
+            <h2>💡 Langkah 5</h2>
+          </div>
+          <div class="doc-card__body">
+            <p class="doc-card__lead">Mulai mencoba.</p>
+            <p>
+              Ilmu yang paling melekat adalah ilmu yang langsung dipraktikkan. Kamu
+              bisa mulai mencoba lewat berbagai kanal, sesuai dengan apa yang paling
+              nyaman untukmu:
+            </p>
+            <div class="chip-grid">
+              <span class="chip"><i data-lucide="instagram"></i> Instagram</span>
+              <span class="chip"><i data-lucide="music-2"></i> TikTok</span>
+              <span class="chip"><i data-lucide="facebook"></i> Facebook</span>
+              <span class="chip"><i data-lucide="layout-panel-left"></i> Landing Page</span>
+              <span class="chip"><i data-lucide="message-circle"></i> WhatsApp</span>
+              <span class="chip"><i data-lucide="graduation-cap"></i> Atau cukup belajar dulu</span>
+            </div>
+            <p>
+              Tidak ada keharusan langsung terjun ke semua kanal sekaligus. Pilih satu
+              yang paling terasa nyaman, atau jika kamu belum siap, tidak apa-apa untuk
+              lebih dulu memperdalam pemahaman sebelum praktik.
+            </p>
+          </div>
+        </article>
+
+        <!-- SECTION 8 -->
+        <article class="doc-card reveal" id="terus-belajar" data-title="Terus Belajar">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--green"><i data-lucide="sprout"></i></span>
+            <h2>🌱 Terus Belajar</h2>
+          </div>
+          <div class="doc-card__body">
+            <p>
+              Hasil yang baik jarang datang dari satu percobaan saja. Yang membedakan
+              member yang berkembang dan yang berhenti di tengah jalan biasanya adalah
+              konsistensi — terus mencoba, terus mengevaluasi, dan terus memperbaiki
+              diri sedikit demi sedikit.
+            </p>
+            <p>
+              Kami tidak akan memberi janji muluk bahwa hasil akan datang secara
+              instan. Yang bisa kami pastikan adalah: selama kamu terus belajar dan
+              konsisten, kemajuan akan selalu ada — walau kadang terasa pelan.
+            </p>
+          </div>
+        </article>
+
+        <!-- SECTION 9 -->
+        <article class="doc-card reveal" id="bonus" data-title="Jangan Lewatkan Bonus">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--violet"><i data-lucide="gift"></i></span>
+            <h2>🎁 Jangan Lewatkan Bonus</h2>
+          </div>
+          <div class="doc-card__body">
+            <p>
+              Selain produk utama, Starter Pack juga dilengkapi dengan berbagai bonus
+              seperti template siap pakai dan marketing kit. Materi-materi ini dibuat
+              untuk mempercepat langkahmu, jadi jangan lewatkan begitu saja. Sempatkan
+              membuka bagian Bonus di dashboard dan manfaatkan sebaik mungkin.
+            </p>
+          </div>
+        </article>
+
+        <!-- SECTION 10 -->
+        <article class="doc-card reveal" id="support" data-title="Support">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--blue"><i data-lucide="life-buoy"></i></span>
+            <h2>🤝 Support</h2>
+          </div>
+          <div class="doc-card__body">
+            <p>
+              Wajar jika di tengah perjalanan kamu menemukan pertanyaan atau merasa
+              ragu. Kamu tidak sendirian — tim admin siap membantu jika kamu
+              membutuhkan penjelasan tambahan, mengalami kendala teknis, atau sekadar
+              ingin bertanya arah yang paling sesuai untukmu.
+            </p>
+            <a href="https://wa.me/6280000000000" target="_blank" rel="noopener noreferrer" class="btn btn--primary ripple">
+              <i data-lucide="message-circle"></i> Hubungi Admin
+            </a>
+          </div>
+        </article>
+
+        <!-- SECTION 11 -->
+        <article class="doc-card reveal" id="pesan-terakhir" data-title="Pesan Terakhir">
+          <div class="doc-card__head">
+            <span class="doc-card__icon doc-card__icon--rose"><i data-lucide="heart"></i></span>
+            <h2>❤️ Pesan Terakhir</h2>
+          </div>
+          <div class="doc-card__body">
+            <p>
+              Terima kasih sudah memberi kepercayaan pada Starter Pack Bisnis Digital
+              ini. Perjalanan setiap orang berbeda-beda, dan itu sepenuhnya normal.
+              Yang terpenting adalah kamu sudah mengambil langkah pertama hari ini.
+            </p>
+            <p>
+              Teruslah belajar, teruslah mencoba, dan berikan waktu bagi dirimu untuk
+              berkembang. Kami di Nyvora Digital akan terus mendukung proses belajarmu
+              di sini.
+            </p>
+          </div>
+        </article>
+
+        <!-- ==================== DISCLAIMER ==================== -->
+        <aside class="disclaimer reveal" role="note" aria-label="Disclaimer">
+          <div class="disclaimer__icon"><i data-lucide="triangle-alert"></i></div>
+          <div class="disclaimer__body">
+            <h3>Disclaimer</h3>
+            <p>
+              Tidak ada jaminan bahwa setiap pengguna akan menghasilkan jumlah
+              pendapatan tertentu. Hasil bervariasi tergantung pada proses belajar,
+              konsistensi, usaha, strategi, dan berbagai faktor lainnya. Gunakan
+              Starter Pack ini sebagai sumber pembelajaran dan alat pendukung bisnis.
+            </p>
+          </div>
+        </aside>
+
+      </main>
+
+      <!-- ==================== SIDEBAR: TABLE OF CONTENTS ==================== -->
+      <aside class="toc-wrap">
+        <nav class="toc" id="toc" aria-label="Daftar isi">
+          <span class="toc__label">
+            <i data-lucide="list-tree"></i> Daftar Isi
+          </span>
+          <ul class="toc__list" id="tocList"><!-- populated by script.js --></ul>
+
+          <div class="toc__progress">
+            <div class="toc__progress-track">
+              <div class="toc__progress-fill" id="tocProgressFill"></div>
+            </div>
+            <span id="tocProgressLabel">0% dibaca</span>
+          </div>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--sm">
+          <img src="../assets/putih.png" alt="" class="brand__logo-img" />
+        </span>
+        <span>Nyvora Digital</span>
+      </div>
+      <p class="footer__copy">© 2026 Nyvora Digital. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

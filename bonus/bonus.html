@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bonus Eksklusif — Nyvora Digital</title>
+  <meta name="description" content="Akses seluruh bonus eksklusif di Member Area Nyvora Digital." />
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== PAGE LOADER ==================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <span class="loader__dot"></span>
+      <span class="loader__dot"></span>
+      <span class="loader__dot"></span>
+    </div>
+  </div>
+
+  <!-- ==================== AMBIENT BACKGROUND ==================== -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__blob ambient__blob--one"></div>
+    <div class="ambient__blob ambient__blob--two"></div>
+    <div class="ambient__grid"></div>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <!-- Brand -->
+      <a href="../dashboard/dashboard.html" class="brand">
+        <span class="brand__mark">
+          <img src="../assets/putih.png" alt="" class="brand__logo-img" />
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Nyvora</span>
+          <span class="brand__suffix">Digital</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="navbar__links" aria-label="Navigasi utama">
+        <a href="../dashboard/dashboard.html" class="navbar__link">
+          <i data-lucide="layout-grid"></i> Dashboard
+        </a>
+        <a href="../products/index.html" class="navbar__link">
+          <i data-lucide="package"></i> Produk
+        </a>
+        <a href="#top" class="navbar__link is-active">
+          <i data-lucide="gift"></i> Bonus
+        </a>
+        <a href="../panduanmember/panduan.html" class="navbar__link">
+          <i data-lucide="book-open"></i> Panduan
+        </a>
+        <a href="../support/support.html" class="navbar__link">
+          <i data-lucide="life-buoy"></i> Support
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="navbar__actions">
+        <button class="icon-btn" id="searchToggle" type="button" aria-label="Cari bonus" aria-expanded="false">
+          <i data-lucide="search"></i>
+        </button>
+
+        <a
+          href="https://wa.me/6280000000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--whatsapp"
+        >
+          <i data-lucide="message-circle"></i>
+          <span>WhatsApp</span>
+        </a>
+
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Panel -->
+    <div class="search-panel" id="searchPanel">
+      <div class="search-panel__inner">
+        <i data-lucide="search"></i>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-panel__input"
+          placeholder="Cari bonus, mis. 'Template Canva'…"
+          autocomplete="off"
+        />
+        <button class="search-panel__close" id="searchClose" type="button" aria-label="Tutup pencarian">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../dashboard/dashboard.html" class="mobile-menu__link"><i data-lucide="layout-grid"></i> Dashboard</a>
+      <a href="../products/index.html" class="mobile-menu__link"><i data-lucide="package"></i> Produk</a>
+      <a href="#top" class="mobile-menu__link mobile-menu__link--accent"><i data-lucide="gift"></i> Bonus</a>
+      <a href="../panduanmember/panduan.html" class="mobile-menu__link"><i data-lucide="book-open"></i> Panduan</a>
+      <a href="../support/support.html" class="mobile-menu__link"><i data-lucide="life-buoy"></i> Support</a>
+      <a href="https://wa.me/6280000000000" target="_blank" rel="noopener noreferrer" class="mobile-menu__link mobile-menu__link--accent">
+        <i data-lucide="message-circle"></i> Hubungi via WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="shell">
+
+      <!-- ==================== HERO ==================== -->
+      <section class="hero fade-up" id="hero">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__blob hero__blob--a" aria-hidden="true"></div>
+        <div class="hero__blob hero__blob--b" aria-hidden="true"></div>
+
+        <span class="hero__eyebrow">
+          <i data-lucide="sparkles"></i>
+          Member Area
+        </span>
+
+        <h1 class="hero__title">🎁 Bonus Eksklusif</h1>
+        <p class="hero__subtitle">
+          Nikmati berbagai bonus yang dirancang untuk membantu perjalananmu
+          mempelajari dan mengembangkan bisnis digital.
+        </p>
+      </section>
+
+      <!-- ==================== BANNER: BONUS AKAN TERUS BERTAMBAH ==================== -->
+      <section class="update-banner fade-up" style="--delay: 30ms" aria-label="Informasi pembaruan bonus">
+        <div class="update-banner__icon"><i data-lucide="rocket"></i></div>
+        <div class="update-banner__body">
+          <h3>🚀 Bonus Akan Terus Bertambah!</h3>
+          <p>
+            Sebagai member Nyvora Digital, kamu akan mendapatkan bonus baru secara
+            berkala tanpa biaya tambahan. Semua update akan otomatis tersedia di
+            halaman ini.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== STAT CARDS ==================== -->
+      <section class="stats fade-up" style="--delay: 60ms" aria-label="Ringkasan bonus">
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--blue"><i data-lucide="gift"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Total Bonus</span>
+            <span class="stat-card__value">5 Bonus</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--green"><i data-lucide="download"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Status</span>
+            <span class="stat-card__value">Aktif</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--violet"><i data-lucide="refresh-cw"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Update</span>
+            <span class="stat-card__value">Terbaru</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--amber"><i data-lucide="star"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Akses</span>
+            <span class="stat-card__value">Seumur Hidup</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== FEATURED BONUS ==================== -->
+      <div class="section-heading fade-up">
+        <h2>🌟 Bonus Pilihan</h2>
+        <p>Bonus yang paling direkomendasikan untuk dipelajari terlebih dahulu.</p>
+      </div>
+
+      <section class="featured fade-up" aria-label="Bonus pilihan">
+        <div class="featured__glow" aria-hidden="true"></div>
+        <div class="featured__icon">📱</div>
+        <div class="featured__body">
+          <span class="featured__tag">
+            <i data-lucide="crown"></i> Paling Direkomendasikan
+          </span>
+          <h3 class="featured__title">Template Konten Media Sosial</h3>
+          <p class="featured__desc">
+            Ide dan template konten siap pakai untuk Instagram, TikTok, Facebook,
+            dan platform lainnya — sudah bisa diakses sekarang.
+          </p>
+          <a href="#" class="btn btn--primary btn--lg ripple">
+            Akses Sekarang
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION HEADING ==================== -->
+      <div class="section-heading fade-up">
+        <h2>Semua Bonus</h2>
+        <p>Kumpulan lengkap bonus yang tersedia untuk kamu.</p>
+      </div>
+
+      <!-- ==================== BONUS CARDS ==================== -->
+      <section class="bonus-grid" id="bonusList" aria-label="Daftar bonus">
+
+        <!-- Bonus 1 (belum tersedia) -->
+        <article class="bonus-card bonus-card--disabled fade-up" style="--delay: 0ms" data-name="Template Canva">
+          <div class="bonus-card__top">
+            <div class="bonus-card__icon">🎨</div>
+            <span class="badge badge--warning"><i data-lucide="clock"></i> Segera Hadir</span>
+          </div>
+          <span class="badge badge--category">Template</span>
+          <h3 class="bonus-card__title">Template Canva</h3>
+          <p class="bonus-card__desc">
+            Kumpulan template siap edit untuk kebutuhan promosi bisnis digital.
+          </p>
+          <button type="button" class="btn btn--disabled bonus-card__btn" disabled>
+            <i data-lucide="clock"></i> Segera Hadir
+          </button>
+        </article>
+
+        <!-- Bonus 2 (belum tersedia) -->
+        <article class="bonus-card bonus-card--disabled fade-up" style="--delay: 60ms" data-name="Template Copywriting">
+          <div class="bonus-card__top">
+            <div class="bonus-card__icon">📝</div>
+            <span class="badge badge--warning"><i data-lucide="clock"></i> Segera Hadir</span>
+          </div>
+          <span class="badge badge--category">Marketing</span>
+          <h3 class="bonus-card__title">Template Copywriting</h3>
+          <p class="bonus-card__desc">
+            Contoh headline, caption, dan copywriting yang bisa dijadikan referensi.
+          </p>
+          <button type="button" class="btn btn--disabled bonus-card__btn" disabled>
+            <i data-lucide="clock"></i> Segera Hadir
+          </button>
+        </article>
+
+        <!-- Bonus 3 (sudah tersedia) -->
+        <article class="bonus-card fade-up" style="--delay: 120ms" data-name="Template Konten Media Sosial">
+          <div class="bonus-card__top">
+            <div class="bonus-card__icon">📱</div>
+            <span class="badge badge--success"><i data-lucide="check-circle-2"></i> Aktif</span>
+          </div>
+          <span class="badge badge--category">Content</span>
+          <h3 class="bonus-card__title">Template Konten Media Sosial</h3>
+          <p class="bonus-card__desc">
+            Ide dan template konten untuk Instagram, TikTok, Facebook, dan
+            platform lainnya.
+          </p>
+          <a href="#" class="btn btn--secondary bonus-card__btn ripple">
+            Akses Bonus <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+        <!-- Bonus 4 (belum tersedia) -->
+        <article class="bonus-card bonus-card--disabled fade-up" style="--delay: 180ms" data-name="Marketing Kit">
+          <div class="bonus-card__top">
+            <div class="bonus-card__icon">📚</div>
+            <span class="badge badge--warning"><i data-lucide="clock"></i> Segera Hadir</span>
+          </div>
+          <span class="badge badge--category">Resources</span>
+          <h3 class="bonus-card__title">Marketing Kit</h3>
+          <p class="bonus-card__desc">
+            Berbagai aset pendukung yang dapat membantu proses pemasaran produk
+            digital.
+          </p>
+          <button type="button" class="btn btn--disabled bonus-card__btn" disabled>
+            <i data-lucide="clock"></i> Segera Hadir
+          </button>
+        </article>
+
+        <!-- Bonus 5 (belum tersedia) -->
+        <article class="bonus-card bonus-card--disabled fade-up" style="--delay: 240ms" data-name="Checklist Memulai Bisnis Digital">
+          <div class="bonus-card__top">
+            <div class="bonus-card__icon">🚀</div>
+            <span class="badge badge--warning"><i data-lucide="clock"></i> Segera Hadir</span>
+          </div>
+          <span class="badge badge--category">Guide</span>
+          <h3 class="bonus-card__title">Checklist Memulai Bisnis Digital</h3>
+          <p class="bonus-card__desc">
+            Checklist sederhana untuk membantu pemula memulai langkah pertama.
+          </p>
+          <button type="button" class="btn btn--disabled bonus-card__btn" disabled>
+            <i data-lucide="clock"></i> Segera Hadir
+          </button>
+        </article>
+
+        <!-- Empty state, shown by script.js when search has no match -->
+        <div class="bonus-grid__empty" id="bonusEmpty" hidden>
+          <i data-lucide="search-x"></i>
+          <p>Tidak ada bonus yang cocok dengan pencarianmu.</p>
+        </div>
+
+      </section>
+
+      <!-- ==================== NOTICE ==================== -->
+      <section class="notice fade-up">
+        <div class="notice__icon"><i data-lucide="megaphone"></i></div>
+        <div class="notice__body">
+          <h3>📢 Informasi</h3>
+          <p>
+            Bonus dapat diperbarui sewaktu-waktu. Seluruh pembaruan akan tersedia
+            melalui Member Area tanpa biaya tambahan selama akses masih aktif.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== DOWNLOAD GUIDE ==================== -->
+      <section class="policy fade-up">
+        <div class="policy__head">
+          <span class="policy__icon"><i data-lucide="download"></i></span>
+          <h3>📥 Cara Mengakses Bonus</h3>
+        </div>
+
+        <ol class="policy__steps">
+          <li>
+            <span class="policy__num">1</span>
+            <span>Pilih bonus yang ingin dibuka.</span>
+          </li>
+          <li>
+            <span class="policy__num">2</span>
+            <span>Klik tombol <strong>Akses Bonus</strong>.</span>
+          </li>
+          <li>
+            <span class="policy__num">3</span>
+            <span>Simpan link jika diperlukan.</span>
+          </li>
+          <li>
+            <span class="policy__num">4</span>
+            <span>Gunakan bonus sesuai kebutuhan dan lisensi yang tersedia.</span>
+          </li>
+        </ol>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--sm">
+          <img src="../assets/logo.png" alt="Nyvora Digital" class="brand__logo-img" />
+        </span>
+        <span>Nyvora Digital</span>
+      </div>
+      <p class="footer__copy">© 2026 Nyvora Digital. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

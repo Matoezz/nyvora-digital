@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pusat Bantuan — Nyvora Digital</title>
+  <meta name="description" content="Pusat bantuan Member Area Nyvora Digital — hubungi admin, baca FAQ, dan temukan jawaban seputar akses produk." />
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== PAGE LOADER ==================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <span class="loader__dot"></span>
+      <span class="loader__dot"></span>
+      <span class="loader__dot"></span>
+    </div>
+  </div>
+
+  <!-- ==================== AMBIENT BACKGROUND ==================== -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__blob ambient__blob--one"></div>
+    <div class="ambient__blob ambient__blob--two"></div>
+    <div class="ambient__grid"></div>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <!-- Brand -->
+      <a href="../dashboard/dashboard.html" class="brand">
+        <span class="brand__mark">
+          <img src="../assets/putih.png" alt="" class="brand__logo-img" />
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Nyvora</span>
+          <span class="brand__suffix">Digital</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="navbar__links" aria-label="Navigasi utama">
+        <a href="../dashboard/dashboard.html" class="navbar__link">
+          <i data-lucide="layout-grid"></i> Dashboard
+        </a>
+        <a href="../products/index.html" class="navbar__link">
+          <i data-lucide="package"></i> Produk
+        </a>
+        <a href="../bonus/bonus.html" class="navbar__link">
+          <i data-lucide="gift"></i> Bonus
+        </a>
+        <a href="../panduanmember/panduan.html" class="navbar__link">
+          <i data-lucide="book-open"></i> Panduan
+        </a>
+        <a href="#top" class="navbar__link is-active">
+          <i data-lucide="life-buoy"></i> Support
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="navbar__actions">
+        <button class="icon-btn" id="searchToggle" type="button" aria-label="Cari pertanyaan" aria-expanded="false">
+          <i data-lucide="search"></i>
+        </button>
+
+        <a
+          href="https://wa.me/6280000000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--whatsapp"
+        >
+          <i data-lucide="message-circle"></i>
+          <span>WhatsApp</span>
+        </a>
+
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Panel -->
+    <div class="search-panel" id="searchPanel">
+      <div class="search-panel__inner">
+        <i data-lucide="search"></i>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-panel__input"
+          placeholder="Cari pertanyaan, mis. 'lisensi'…"
+          autocomplete="off"
+        />
+        <button class="search-panel__close" id="searchClose" type="button" aria-label="Tutup pencarian">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../dashboard/dashboard.html" class="mobile-menu__link"><i data-lucide="layout-grid"></i> Dashboard</a>
+      <a href="../products/index.html" class="mobile-menu__link"><i data-lucide="package"></i> Produk</a>
+      <a href="../bonus/bonus.html" class="mobile-menu__link"><i data-lucide="gift"></i> Bonus</a>
+      <a href="../panduanmember/panduan.html" class="mobile-menu__link"><i data-lucide="book-open"></i> Panduan</a>
+      <a href="#top" class="mobile-menu__link mobile-menu__link--accent"><i data-lucide="life-buoy"></i> Support</a>
+      <a href="https://wa.me/6280000000000" target="_blank" rel="noopener noreferrer" class="mobile-menu__link mobile-menu__link--accent">
+        <i data-lucide="message-circle"></i> Hubungi via WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="shell">
+
+      <!-- ==================== HERO ==================== -->
+      <section class="hero fade-up" id="hero">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__blob hero__blob--a" aria-hidden="true"></div>
+        <div class="hero__blob hero__blob--b" aria-hidden="true"></div>
+
+        <span class="hero__eyebrow">
+          <i data-lucide="life-buoy"></i>
+          Member Area
+        </span>
+
+        <h1 class="hero__title">💬 Pusat Bantuan</h1>
+        <p class="hero__subtitle">
+          Kami siap membantu jika kamu mengalami kendala dalam mengakses produk
+          atau memiliki pertanyaan seputar Member Area.
+        </p>
+      </section>
+
+      <!-- ==================== STAT CARDS ==================== -->
+      <section class="stats fade-up" style="--delay: 60ms" aria-label="Ringkasan layanan support">
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--blue"><i data-lucide="headset"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Customer Support</span>
+            <span class="stat-card__value">Aktif</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--green"><i data-lucide="circle-dot"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Status</span>
+            <span class="stat-card__value">Online</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--violet"><i data-lucide="clock"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Jam Layanan</span>
+            <span class="stat-card__value">09.00–21.00 WIB</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--amber"><i data-lucide="zap"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Respon</span>
+            <span class="stat-card__value">Secepat Mungkin</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION HEADING ==================== -->
+      <div class="section-heading fade-up">
+        <h2>Hubungi Kami</h2>
+        <p>Pilih cara yang paling nyaman untukmu.</p>
+      </div>
+
+      <!-- ==================== CONTACT CARDS ==================== -->
+      <section class="contact-grid fade-up" aria-label="Kanal kontak">
+
+        <article class="contact-card">
+          <div class="contact-card__icon contact-card__icon--green"><i data-lucide="message-circle"></i></div>
+          <h3 class="contact-card__title">💬 WhatsApp</h3>
+          <p class="contact-card__desc">Hubungi admin melalui WhatsApp.</p>
+          <a href="#" class="btn btn--secondary contact-card__btn ripple">
+            Hubungi Sekarang <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-card__icon contact-card__icon--blue"><i data-lucide="mail"></i></div>
+          <h3 class="contact-card__title">📧 Email</h3>
+          <p class="contact-card__desc">Kirim pertanyaan melalui email.</p>
+          <a href="#" class="btn btn--secondary contact-card__btn ripple">
+            Kirim Email <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-card__icon contact-card__icon--violet"><i data-lucide="book-open"></i></div>
+          <h3 class="contact-card__title">📖 Panduan</h3>
+          <p class="contact-card__desc">Pelajari panduan sebelum menghubungi admin.</p>
+          <a href="#" class="btn btn--secondary contact-card__btn ripple">
+            Buka Panduan <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-card__icon contact-card__icon--amber"><i data-lucide="package"></i></div>
+          <h3 class="contact-card__title">📦 Produk</h3>
+          <p class="contact-card__desc">Kembali ke halaman Produk Utama.</p>
+          <a href="#" class="btn btn--secondary contact-card__btn ripple">
+            Lihat Produk <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+        <!-- Kartu ke-5: Kritik & Saran (lebar penuh, berisi form) -->
+        <article class="contact-card contact-card--form">
+          <div class="contact-card__icon contact-card__icon--violet"><i data-lucide="message-square-heart"></i></div>
+          <h3 class="contact-card__title">💡 Kritik &amp; Saran</h3>
+          <p class="contact-card__desc">
+            Punya masukan supaya Member Area ini semakin baik? Tulis di sini —
+            pesanmu akan disiapkan otomatis untuk dikirim lewat WhatsApp.
+          </p>
+
+          <form id="feedbackForm" class="feedback-form" novalidate>
+            <div class="feedback-form__row">
+              <label for="feedbackName">Nama (opsional)</label>
+              <input type="text" id="feedbackName" name="name" placeholder="Nama kamu" autocomplete="name" />
+            </div>
+
+            <div class="feedback-form__row">
+              <label for="feedbackMessage">Kritik / Saran <span class="feedback-form__required">*</span></label>
+              <textarea
+                id="feedbackMessage"
+                name="message"
+                rows="4"
+                placeholder="Tulis kritik atau saranmu di sini…"
+                required
+              ></textarea>
+              <span class="feedback-form__error" id="feedbackError" hidden>
+                Mohon isi kritik/saran terlebih dahulu.
+              </span>
+            </div>
+
+            <button type="submit" class="btn btn--primary feedback-form__submit ripple">
+              Kirim Masukan <i data-lucide="send"></i>
+            </button>
+
+            <p class="feedback-form__success" id="feedbackSuccess" hidden>
+              <i data-lucide="check-circle-2"></i>
+              Pesanmu sudah disiapkan — lanjutkan kirim di tab WhatsApp yang baru terbuka.
+            </p>
+          </form>
+        </article>
+
+      </section>
+
+      <!-- ==================== FAQ ==================== -->
+      <div class="section-heading fade-up">
+        <h2>Pertanyaan Umum</h2>
+        <p>Jawaban cepat untuk pertanyaan yang paling sering ditanyakan.</p>
+      </div>
+
+      <section class="faq fade-up" id="faqList" aria-label="Pertanyaan umum">
+
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Bagaimana cara mengakses produk?</span>
+            <i data-lucide="chevron-down" class="faq-item__chevron"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Buka halaman <strong>Produk</strong> di Member Area, lalu klik tombol
+              "Akses Produk" pada produk yang ingin kamu buka. Halaman materi akan
+              langsung terbuka di tab baru.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Bagaimana jika link tidak bisa dibuka?</span>
+            <i data-lucide="chevron-down" class="faq-item__chevron"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Coba refresh halaman atau periksa koneksi internetmu terlebih dahulu.
+              Jika masih terkendala, hubungi admin melalui WhatsApp dan sertakan
+              screenshot agar bisa dibantu lebih cepat.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Bagaimana cara mendapatkan update produk?</span>
+            <i data-lucide="chevron-down" class="faq-item__chevron"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Setiap pembaruan akan otomatis tersedia melalui Member Area ini tanpa
+              biaya tambahan. Kamu tidak perlu melakukan apa pun secara khusus —
+              cukup buka kembali halaman produk terkait.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Bagaimana jika saya kehilangan akses?</span>
+            <i data-lucide="chevron-down" class="faq-item__chevron"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Hubungi admin melalui WhatsApp dengan menyertakan data pembelianmu
+              (nama, email, atau bukti transaksi) agar akses dapat segera dipulihkan.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Apakah produk bisa diakses selamanya?</span>
+            <i data-lucide="chevron-down" class="faq-item__chevron"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Ya, akses Member Area berlaku seumur hidup selama akun kamu tetap
+              aktif dan digunakan sesuai ketentuan yang berlaku.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>Bagaimana cara menggunakan lisensi produk?</span>
+            <i data-lucide="chevron-down" class="faq-item__chevron"></i>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Setiap produk memiliki keterangan lisensi (misalnya PLR/MRR) yang bisa
+              dilihat di halaman Produk. Gunakan sesuai batasan yang tertera pada
+              masing-masing lisensi tersebut.
+            </p>
+          </div>
+        </div>
+
+        <!-- Empty state, shown by script.js when search has no match -->
+        <div class="faq__empty" id="faqEmpty" hidden>
+          <i data-lucide="search-x"></i>
+          <p>Tidak ada pertanyaan yang cocok dengan pencarianmu.</p>
+        </div>
+
+      </section>
+
+      <!-- ==================== HELP BOX ==================== -->
+      <section class="notice fade-up">
+        <div class="notice__icon"><i data-lucide="megaphone"></i></div>
+        <div class="notice__body">
+          <h3>📢 Sebelum Menghubungi Admin</h3>
+          <ul class="notice__list">
+            <li><i data-lucide="check"></i> Pastikan kamu sudah membaca halaman Panduan terlebih dahulu.</li>
+            <li><i data-lucide="check"></i> Periksa kembali koneksi internet.</li>
+            <li><i data-lucide="check"></i> Pastikan menggunakan akun yang benar.</li>
+            <li><i data-lucide="check"></i> Sertakan screenshot jika mengalami kendala teknis.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ==================== DISCLAIMER ==================== -->
+      <aside class="disclaimer fade-up" role="note" aria-label="Informasi penting">
+        <div class="disclaimer__icon"><i data-lucide="triangle-alert"></i></div>
+        <div class="disclaimer__body">
+          <h3>⚠️ Informasi Penting</h3>
+          <p>
+            Tim support hanya membantu terkait akses produk, kendala teknis, dan
+            pertanyaan mengenai Member Area. Kami tidak memberikan layanan
+            konsultasi bisnis secara pribadi.
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--sm">
+          <img src="../assets/putih.png" alt="" class="brand__logo-img" />
+        </span>
+        <span>Nyvora Digital</span>
+      </div>
+      <p class="footer__copy">© 2026 Nyvora Digital. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

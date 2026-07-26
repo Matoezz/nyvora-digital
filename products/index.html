@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk Utama — Nyvora Digital</title>
+  <meta name="description" content="Akses seluruh produk digital yang kamu miliki di Member Area Nyvora Digital." />
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== PAGE LOADER ==================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <span class="loader__dot"></span>
+      <span class="loader__dot"></span>
+      <span class="loader__dot"></span>
+    </div>
+  </div>
+
+  <!-- ==================== AMBIENT BACKGROUND ==================== -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__blob ambient__blob--one"></div>
+    <div class="ambient__blob ambient__blob--two"></div>
+    <div class="ambient__grid"></div>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <!-- Brand -->
+      <a href="../dashboard/dashboard.html" class="brand">
+        <span class="brand__mark">
+          <img src="../assets/putih.png" alt="" class="brand__logo-img" />
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Nyvora</span>
+          <span class="brand__suffix">Digital</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="navbar__links" aria-label="Navigasi utama">
+        <a href="../dashboard/dashboard.html" class="navbar__link">
+          <i data-lucide="layout-grid"></i> Dashboard
+        </a>
+        <a href="#top" class="navbar__link is-active">
+          <i data-lucide="package"></i> Produk
+        </a>
+        <a href="../bonus/bonus.html#produk" class="navbar__link">
+          <i data-lucide="gift"></i> Bonus
+        </a>
+        <a href="../panduanmember/panduan.html" class="navbar__link">
+          <i data-lucide="book-open"></i> Panduan
+        </a>
+        <a href="../support/support.html" class="navbar__link">
+          <i data-lucide="life-buoy"></i> Support
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="navbar__actions">
+        <button class="icon-btn" id="searchToggle" type="button" aria-label="Cari produk" aria-expanded="false">
+          <i data-lucide="search"></i>
+        </button>
+
+        <a
+          href="https://wa.me/6280000000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--whatsapp"
+        >
+          <i data-lucide="message-circle"></i>
+          <span>WhatsApp</span>
+        </a>
+
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Panel -->
+    <div class="search-panel" id="searchPanel">
+      <div class="search-panel__inner">
+        <i data-lucide="search"></i>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-panel__input"
+          placeholder="Cari produk, mis. 'Starter Pack'…"
+          autocomplete="off"
+        />
+        <button class="search-panel__close" id="searchClose" type="button" aria-label="Tutup pencarian">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../dashboard/dashboard.html" class="mobile-menu__link"><i data-lucide="layout-grid"></i> Dashboard</a>
+      <a href="#top" class="mobile-menu__link mobile-menu__link--accent"><i data-lucide="package"></i> Produk</a>
+      <a href="../bonus/bonus.html#bonuss" class="mobile-menu__link"><i data-lucide="gift"></i> Bonus</a>
+      <a href="../panduanmember/panduan.html" class="mobile-menu__link"><i data-lucide="book-open"></i> Panduan</a>
+      <a href="../support/support.html" class="mobile-menu__link"><i data-lucide="life-buoy"></i> Support</a>
+      <a href="https://wa.me/6280000000000" target="_blank" rel="noopener noreferrer" class="mobile-menu__link mobile-menu__link--accent">
+        <i data-lucide="message-circle"></i> Hubungi via WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="shell">
+
+      <!-- ==================== HERO ==================== -->
+      <section class="hero fade-up" id="hero">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__blob hero__blob--a" aria-hidden="true"></div>
+        <div class="hero__blob hero__blob--b" aria-hidden="true"></div>
+
+        <span class="hero__eyebrow">
+          <i data-lucide="layers"></i>
+          Member Area
+        </span>
+
+        <h1 class="hero__title">📦 Produk Utama</h1>
+        <p class="hero__subtitle">
+          Semua produk digital yang kamu miliki tersedia di halaman ini.
+          Klik <strong>"Akses Produk"</strong> untuk membuka materi.
+        </p>
+      </section>
+
+      <!-- ==================== STAT CARDS ==================== -->
+      <section class="stats fade-up" style="--delay: 60ms" aria-label="Ringkasan produk">
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--blue"><i data-lucide="package"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Total Produk</span>
+            <span class="stat-card__value">2 Produk</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--green"><i data-lucide="star"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Status</span>
+            <span class="stat-card__value">Aktif</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--violet"><i data-lucide="refresh-cw"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Versi</span>
+            <span class="stat-card__value">v1.0</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-card__icon stat-card__icon--amber"><i data-lucide="calendar-clock"></i></span>
+          <div class="stat-card__text">
+            <span class="stat-card__label">Update</span>
+            <span class="stat-card__value">Terbaru</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION HEADING ==================== -->
+      <div class="section-heading fade-up">
+        <h2>Daftar Produk</h2>
+        <p>Pilih produk yang ingin kamu pelajari atau gunakan.</p>
+      </div>
+
+      <!-- ==================== PRODUCT CARDS ==================== -->
+      <section class="products" id="productList" aria-label="Daftar produk">
+
+        <!-- Product 1 -->
+        <article class="product-card fade-up" style="--delay: 0ms" data-name="Starter Pack Bisnis Digital">
+          <div class="product-card__top">
+            <div class="product-card__icon">🚀</div>
+            <span class="badge badge--success">
+              <i data-lucide="check-circle-2"></i> Aktif
+            </span>
+          </div>
+
+          <h3 class="product-card__name">Starter Pack Bisnis Digital</h3>
+          <p class="product-card__desc">
+            Panduan lengkap untuk memulai bisnis digital beserta kumpulan aset
+            pilihan yang cocok untuk pelajar maupun pemula.
+          </p>
+
+          <dl class="product-card__meta">
+            <div class="meta-item">
+              <dt><i data-lucide="tag"></i> Versi</dt>
+              <dd>v1.0</dd>
+            </div>
+            <div class="meta-item">
+              <dt><i data-lucide="scroll-text"></i> Lisensi</dt>
+              <dd>PLR / MRR</dd>
+            </div>
+            <div class="meta-item">
+              <dt><i data-lucide="hard-drive"></i> Ukuran</dt>
+              <dd>8+ Juta Produk Digital</dd>
+            </div>
+            <div class="meta-item">
+              <dt><i data-lucide="calendar"></i> Update Terakhir</dt>
+              <dd>Terbaru</dd>
+            </div>
+          </dl>
+
+          <a href="https://app.notion.com/p/2343da8f45d682c8ad0301d3e47efad8?v=1ac3da8f45d6829aabf688e26f0e3747&source=copy_link" class="btn btn--primary product-card__btn ripple">
+            Akses Produk
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card fade-up" style="--delay: 90ms" data-name="1000+ Produk Digital Terlaris">
+          <div class="product-card__top">
+            <div class="product-card__icon">🏆</div>
+            <span class="badge badge--success">
+              <i data-lucide="check-circle-2"></i> Aktif
+            </span>
+          </div>
+
+          <h3 class="product-card__name">1000+ Produk Digital Terlaris</h3>
+          <p class="product-card__desc">
+            Kumpulan produk digital best seller yang dapat dipelajari, digunakan,
+            maupun dijadikan referensi untuk memulai bisnis digital.
+          </p>
+
+          <dl class="product-card__meta">
+            <div class="meta-item">
+              <dt><i data-lucide="tag"></i> Versi</dt>
+              <dd>v1.0</dd>
+            </div>
+            <div class="meta-item">
+              <dt><i data-lucide="scroll-text"></i> Lisensi</dt>
+              <dd>PLR / MRR</dd>
+            </div>
+            <div class="meta-item">
+              <dt><i data-lucide="hard-drive"></i> Ukuran</dt>
+              <dd>1000+ Produk</dd>
+            </div>
+            <div class="meta-item">
+              <dt><i data-lucide="calendar"></i> Update Terakhir</dt>
+              <dd>Terbaru</dd>
+            </div>
+          </dl>
+
+          <a href="https://app.notion.com/p/1000-Produk-Digital-Terlaris-3a73da8f45d6808b8ff9ca920ca1c8a0?source=copy_link" class="btn btn--primary product-card__btn ripple">
+            Akses Produk
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+        <!-- Empty state, shown by script.js when search has no match -->
+        <div class="products__empty" id="productsEmpty" hidden>
+          <i data-lucide="search-x"></i>
+          <p>Tidak ada produk yang cocok dengan pencarianmu.</p>
+        </div>
+
+      </section>
+
+      <!-- ==================== NOTICE ==================== -->
+      <section class="notice fade-up">
+        <div class="notice__icon"><i data-lucide="megaphone"></i></div>
+        <div class="notice__body">
+          <h3>📢 Informasi</h3>
+          <p>
+            Semua produk akan terus mendapatkan pembaruan apabila tersedia versi
+            terbaru. Pastikan Anda selalu mengakses produk melalui Member Area ini.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== DOWNLOAD POLICY ==================== -->
+      <section class="policy fade-up">
+        <div class="policy__head">
+          <span class="policy__icon"><i data-lucide="download"></i></span>
+          <h3>📥 Cara Mengakses Produk</h3>
+        </div>
+
+        <ol class="policy__steps">
+          <li>
+            <span class="policy__num">1</span>
+            <span>Klik tombol <strong>Akses Produk</strong>.</span>
+          </li>
+          <li>
+            <span class="policy__num">2</span>
+            <span>Produk akan terbuka pada halaman khusus.</span>
+          </li>
+          <li>
+            <span class="policy__num">3</span>
+            <span>Simpan link jika diperlukan.</span>
+          </li>
+          <li>
+            <span class="policy__num">4</span>
+            <span>Jangan membagikan akses kepada orang lain.</span>
+          </li>
+        </ol>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--sm">
+          <img src="../assets/putih.png" alt="" class="brand__logo-img" />
+        </span>
+        <span>Nyvora Digital</span>
+      </div>
+      <p class="footer__copy">© 2026 Nyvora Digital. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

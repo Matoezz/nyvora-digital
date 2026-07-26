@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nyvora Digital — Member Area</title>
+  <meta name="description" content="Member dashboard untuk akses produk, bonus, dan panduan Starter Pack Bisnis Digital." />
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="..assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="..assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="..assets/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== PAGE LOADER ==================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <span class="loader__dot"></span>
+      <span class="loader__dot"></span>
+      <span class="loader__dot"></span>
+    </div>
+  </div>
+
+  <!-- ==================== AMBIENT BACKGROUND ==================== -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__blob ambient__blob--one"></div>
+    <div class="ambient__blob ambient__blob--two"></div>
+    <div class="ambient__blob ambient__blob--three"></div>
+    <div class="ambient__grid"></div>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <!-- Brand -->
+      <a href="#top" class="brand">
+        <span class="brand__mark">
+          <img src="../assets/putih.png" alt="" class="brand__logo-img" />
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Nyvora</span>
+          <span class="brand__suffix">Digital</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="navbar__links" aria-label="Navigasi utama">
+        <a href="#top" class="navbar__link is-active">
+          <i data-lucide="layout-grid"></i> Dashboard
+        </a>
+        <a href="../products/index.html" class="navbar__link">
+          <i data-lucide="package"></i> Produk
+        </a>
+        <a href="../bonus/bonus.html" class="navbar__link">
+          <i data-lucide="gift"></i> Bonus
+        </a>
+        <a href="../panduanmember/panduan.html" class="navbar__link">
+          <i data-lucide="book-open"></i> Panduan
+        </a>
+        <a href="../support/support.html" class="navbar__link">
+          <i data-lucide="life-buoy"></i> Support
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="navbar__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tampilan gelap/terang" title="Mode gelap segera hadir">
+          <i data-lucide="moon"></i>
+        </button>
+
+        <a
+          href="https://wa.me/6280000000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--whatsapp"
+        >
+          <i data-lucide="message-circle"></i>
+          <span>WhatsApp</span>
+        </a>
+
+        <button class="navbar__burger" id="navBurger" type="button" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#top" class="mobile-menu__link mobile-menu__link--accent">
+        <i data-lucide="layout-grid"></i> Dashboard
+      </a>
+      <a href="../products/index.html" class="mobile-menu__link">
+        <i data-lucide="package"></i> Produk
+      </a>
+      <a href="../bonus/bonus.html" class="mobile-menu__link">
+        <i data-lucide="gift"></i> Bonus
+      </a>
+      <a href="../panduanmember/panduan.html" class="mobile-menu__link">
+        <i data-lucide="book-open"></i> Panduan
+      </a>
+      <a href="../support/support.html" class="mobile-menu__link">
+        <i data-lucide="life-buoy"></i> Support
+      </a>
+      <a href="https://wa.me/6280000000000" target="_blank" rel="noopener noreferrer" class="mobile-menu__link mobile-menu__link--accent">
+        <i data-lucide="message-circle"></i> Hubungi via WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="shell">
+
+      <!-- ==================== HERO ==================== -->
+      <section class="hero fade-up" id="hero">
+        <div class="hero__glow" aria-hidden="true"></div>
+
+        <div class="hero__top">
+          <span class="hero__eyebrow">
+            <i data-lucide="sparkles"></i>
+            Starter Pack Bisnis Digital
+          </span>
+          <span class="hero__status">
+            <span class="hero__status-dot"></span>
+            Akses Aktif
+          </span>
+        </div>
+
+        <h1 class="hero__title">👋 Selamat Datang di Member Area</h1>
+        <p class="hero__desc">
+          Terima kasih telah membeli <strong>Starter Pack Bisnis Digital</strong>.
+          Semua produk, bonus, dan panduan tersedia di halaman ini.
+        </p>
+
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Produk dimiliki</span>
+            <span class="hero__meta-value">4 Modul</span>
+          </div>
+          <span class="hero__meta-divider" aria-hidden="true"></span>
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Status akun</span>
+            <span class="hero__meta-value hero__meta-value--success">
+              <i data-lucide="badge-check"></i> Terverifikasi
+            </span>
+          </div>
+          <span class="hero__meta-divider" aria-hidden="true"></span>
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Member sejak</span>
+            <span class="hero__meta-value">Jan 2026</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION HEADING ==================== -->
+      <div class="section-heading fade-up" id="produk">
+        <h2>Akses Member</h2>
+        <p>Semua yang kamu butuhkan untuk memulai, ada di satu tempat.</p>
+      </div>
+
+      <!-- ==================== FEATURE CARDS ==================== -->
+      <section class="grid" aria-label="Daftar akses member">
+
+        <!-- Card 1: Produk Utama -->
+        <article class="card fade-up" style="--delay: 0ms">
+          <div class="card__icon card__icon--blue">
+            <i data-lucide="package"></i>
+          </div>
+          <h3 class="card__title">Produk Utama</h3>
+          <p class="card__desc">Akses seluruh produk digital.</p>
+          <a
+            href="../products/index.html"
+            class="btn btn--primary card__btn ripple"
+          >
+            Buka Produk
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+        <!-- Card 2: Bonus -->
+        <article class="card fade-up" style="--delay: 80ms">
+          <div class="card__icon card__icon--amber">
+            <i data-lucide="gift"></i>
+          </div>
+          <h3 class="card__title">Bonus</h3>
+          <p class="card__desc">Template, marketing kit, dan bonus eksklusif.</p>
+          <a
+            href="../bonus/bonus.html"
+            class="btn btn--secondary card__btn ripple"
+          >
+            Lihat Bonus
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+        <!-- Card 3: Panduan -->
+        <article class="card fade-up" style="--delay: 160ms">
+          <div class="card__icon card__icon--violet">
+            <i data-lucide="book-open"></i>
+          </div>
+          <h3 class="card__title">Panduan</h3>
+          <p class="card__desc">Panduan memulai bisnis digital.</p>
+          <a
+            href="../panduanmember/panduan.html"
+            class="btn btn--secondary card__btn ripple"
+          >
+            Baca Panduan
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+        <!-- Card 4: Support -->
+        <article class="card fade-up" id="support" style="--delay: 240ms">
+          <div class="card__icon card__icon--green">
+            <i data-lucide="message-circle-question"></i>
+          </div>
+          <h3 class="card__title">Support</h3>
+          <p class="card__desc">Butuh bantuan?</p>
+          <a
+            href="../support/support.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--secondary card__btn ripple"
+          >
+            Hubungi Admin
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </article>
+
+      </section>
+
+      <!-- ==================== HELP STRIP ==================== -->
+      <section class="help-strip fade-up">
+        <div class="help-strip__text">
+          <i data-lucide="shield-check"></i>
+          <div>
+            <strong>Akses seumur hidup.</strong>
+            <span>Semua materi bisa kamu unduh kapan saja, tanpa batas waktu.</span>
+          </div>
+        </div>
+        <a href="https://wa.me/6280000000000" target="_blank" rel="noopener noreferrer" class="help-strip__link">
+          Chat Admin <i data-lucide="arrow-right"></i>
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--sm">
+          <img src="../assets/putih.png" alt="" class="brand__logo-img" />
+        </span>
+        <span>Nyvora Digital</span>
+      </div>
+      <p class="footer__copy">© 2026 Nyvora Digital. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
