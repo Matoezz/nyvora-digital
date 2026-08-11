@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checklist Memulai Bisnis Digital</title>
+  <meta name="description" content="Checklist step-by-step buat pelajar, mahasiswa, dan pemula yang mau mulai bisnis digital. Nggak perlu langsung jago." />
+
+  <!-- Google Fonts: Space Grotesk (judul) + Inter (isi) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__glow"></div>
+  </div>
+
+  <main class="shell">
+
+    <!-- ==================== HERO ==================== -->
+    <header class="hero">
+      <span class="badge">START HERE</span>
+      <h1 class="hero__title">Checklist Memulai Bisnis Digital</h1>
+      <p class="hero__subtitle">
+        Nggak perlu langsung jago. Ikuti checklist ini satu per satu dan
+        mulai dari apa yang kamu punya sekarang.
+      </p>
+
+      <ul class="meta-row">
+        <li>Cocok untuk pemula</li>
+        <li>Bisa dimulai dari HP</li>
+        <li>Step by step</li>
+      </ul>
+    </header>
+
+    <!-- ==================== PROGRESS HERO (signature element) ==================== -->
+    <section class="progress-hero" aria-label="Progres checklist kamu">
+      <div class="progress-hero__top">
+        <div class="progress-hero__figure">
+          <span class="progress-hero__percent" id="percentText">0%</span>
+          <span class="progress-hero__count" id="countText">0 / 34 selesai</span>
+        </div>
+
+        <div class="progress-hero__actions">
+          <button type="button" class="btn btn--ghost" id="resetBtn">
+            Reset Checklist
+          </button>
+          <button type="button" class="btn btn--accent" id="checkAllBtn">
+            Tandai Semua Selesai
+          </button>
+        </div>
+      </div>
+
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack">
+        <div class="progress-track__fill" id="progressFill"></div>
+      </div>
+
+      <p class="progress-hero__message" id="progressMessage">Yuk mulai dari langkah pertama 🚀</p>
+
+      <!-- Rel 7 tahap — peta perjalanan checklist -->
+      <div class="stage-rail" id="stageRail" aria-hidden="true">
+        <!-- diisi otomatis oleh script.js -->
+      </div>
+    </section>
+
+    <!-- ==================== KATEGORI CHECKLIST ==================== -->
+    <div class="categories" id="categories">
+
+      <!-- KATEGORI 1 -->
+      <section class="category" data-category="1">
+        <div class="category__head">
+          <span class="category__icon">🎯</span>
+          <div class="category__head-text">
+            <h2>Tentukan Arah Bisnis</h2>
+            <p>Sebelum jalan, tahu dulu mau ke mana.</p>
+          </div>
+          <span class="category__count" data-category-count></span>
+        </div>
+
+        <div class="items">
+          <label class="item">
+            <input type="checkbox" id="c1-1" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan tujuan kamu</span>
+              <span class="item__desc">Tentukan dulu kamu ingin bisnis ini untuk apa. Misalnya buat nambah uang jajan, belajar jualan, atau membangun penghasilan sampingan.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c1-2" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan target orang yang ingin kamu bantu</span>
+              <span class="item__desc">Coba pikirkan siapa yang paling mungkin membutuhkan produk atau jasa kamu. Pelajar? UMKM? Content creator? Atau orang yang baru mulai bisnis?</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c1-3" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Pilih jenis bisnis digital</span>
+              <span class="item__desc">Pilih model yang paling masuk akal buat kamu. Bisa jual produk digital, jasa, affiliate, atau model bisnis digital lainnya.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c1-4" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan satu fokus utama</span>
+              <span class="item__desc">Jangan mencoba semuanya sekaligus. Pilih satu hal dulu supaya kamu bisa lebih fokus dan nggak gampang overwhelmed.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- KATEGORI 2 -->
+      <section class="category" data-category="2">
+        <div class="category__head">
+          <span class="category__icon">📦</span>
+          <div class="category__head-text">
+            <h2>Siapkan Produk / Jasa</h2>
+            <p>Yang mau kamu tawarkan ke orang lain.</p>
+          </div>
+          <span class="category__count" data-category-count></span>
+        </div>
+
+        <div class="items">
+          <label class="item">
+            <input type="checkbox" id="c2-1" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan apa yang mau dijual</span>
+              <span class="item__desc">Pastikan kamu tahu produk atau jasa apa yang ingin kamu tawarkan.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c2-2" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Cari tahu masalah yang ingin diselesaikan</span>
+              <span class="item__desc">Produk yang bagus biasanya membantu orang menyelesaikan masalah atau mendapatkan sesuatu yang mereka butuhkan.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c2-3" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan manfaat produk</span>
+              <span class="item__desc">Jelaskan dengan sederhana: setelah membeli produk kamu, apa yang akan didapatkan atau terbantu?</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c2-4" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Siapkan produk atau layanan</span>
+              <span class="item__desc">Pastikan produk sudah cukup siap untuk ditawarkan. Nggak harus sempurna, yang penting layak digunakan dan jelas manfaatnya.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c2-5" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan harga</span>
+              <span class="item__desc">Pilih harga yang masuk akal berdasarkan nilai produk, target pembeli, dan kondisi pasar.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- KATEGORI 3 -->
+      <section class="category" data-category="3">
+        <div class="category__head">
+          <span class="category__icon">🎨</span>
+          <div class="category__head-text">
+            <h2>Bangun Identitas Bisnis</h2>
+            <p>Biar orang gampang kenal dan inget bisnismu.</p>
+          </div>
+          <span class="category__count" data-category-count></span>
+        </div>
+
+        <div class="items">
+          <label class="item">
+            <input type="checkbox" id="c3-1" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan nama brand</span>
+              <span class="item__desc">Pilih nama yang mudah diingat dan sesuai dengan bisnis kamu.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c3-2" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Buat logo sederhana</span>
+              <span class="item__desc">Nggak perlu terlalu rumit. Logo sederhana yang terlihat rapi sudah cukup untuk mulai.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c3-3" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan warna dan gaya visual</span>
+              <span class="item__desc">Pilih beberapa warna dan gaya desain supaya tampilan bisnis kamu terlihat lebih konsisten.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c3-4" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Buat akun media sosial bisnis</span>
+              <span class="item__desc">Gunakan platform yang paling sering digunakan target audiens kamu.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c3-5" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tulis bio bisnis</span>
+              <span class="item__desc">Buat bio singkat yang menjelaskan kamu jual apa dan siapa yang bisa terbantu dengan produk kamu.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- KATEGORI 4 -->
+      <section class="category" data-category="4">
+        <div class="category__head">
+          <span class="category__icon">🛒</span>
+          <div class="category__head-text">
+            <h2>Siapkan Tempat Jualan</h2>
+            <p>Tempat orang bisa lihat dan beli produkmu.</p>
+          </div>
+          <span class="category__count" data-category-count></span>
+        </div>
+
+        <div class="items">
+          <label class="item">
+            <input type="checkbox" id="c4-1" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan tempat untuk menjual produk</span>
+              <span class="item__desc">Kamu bisa menggunakan landing page, marketplace, media sosial, atau platform lain yang sesuai.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c4-2" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Buat halaman produk / landing page</span>
+              <span class="item__desc">Jelaskan produk dengan jelas: masalahnya apa, solusinya apa, apa yang didapat, dan bagaimana cara membelinya.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c4-3" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Siapkan sistem pembayaran</span>
+              <span class="item__desc">Pastikan calon pembeli punya cara yang mudah untuk melakukan pembayaran.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c4-4" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Siapkan halaman checkout</span>
+              <span class="item__desc">Buat proses pembelian sesederhana mungkin supaya calon pembeli nggak bingung.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c4-5" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Siapkan akses produk</span>
+              <span class="item__desc">Pastikan setelah pembayaran berhasil, pembeli tahu harus mendapatkan produk dari mana.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- KATEGORI 5 -->
+      <section class="category" data-category="5">
+        <div class="category__head">
+          <span class="category__icon">📣</span>
+          <div class="category__head-text">
+            <h2>Mulai Marketing</h2>
+            <p>Biar orang tahu bisnismu ada.</p>
+          </div>
+          <span class="category__count" data-category-count></span>
+        </div>
+
+        <div class="items">
+          <label class="item">
+            <input type="checkbox" id="c5-1" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan platform marketing</span>
+              <span class="item__desc">Pilih satu atau dua platform dulu. Nggak perlu langsung aktif di semua media sosial.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c5-2" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Buat konten pertama</span>
+              <span class="item__desc">Mulai dengan konten sederhana yang memberikan informasi, solusi, atau memperkenalkan produk kamu.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c5-3" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Buat beberapa ide konten</span>
+              <span class="item__desc">Siapkan beberapa ide supaya kamu nggak selalu bingung harus posting apa.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c5-4" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Buat call to action</span>
+              <span class="item__desc">Beritahu audiens apa yang harus mereka lakukan setelah melihat konten kamu, misalnya klik link, chat, atau melihat produk.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c5-5" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Mulai posting secara konsisten</span>
+              <span class="item__desc">Nggak perlu langsung posting setiap hari. Yang penting mulai dan terus belajar dari hasilnya.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- KATEGORI 6 -->
+      <section class="category" data-category="6">
+        <div class="category__head">
+          <span class="category__icon">✅</span>
+          <div class="category__head-text">
+            <h2>Siap Jualan</h2>
+            <p>Cek ulang semuanya sebelum mulai nawarin.</p>
+          </div>
+          <span class="category__count" data-category-count></span>
+        </div>
+
+        <div class="items">
+          <label class="item">
+            <input type="checkbox" id="c6-1" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Pastikan produk sudah bisa dibeli</span>
+              <span class="item__desc">Coba cek sendiri proses pembelian dari awal sampai akhir.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c6-2" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Cek link dan tombol</span>
+              <span class="item__desc">Pastikan semua tombol dan link mengarah ke halaman yang benar.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c6-3" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Coba proses checkout</span>
+              <span class="item__desc">Lakukan pengecekan supaya nggak ada bagian yang error atau membingungkan.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c6-4" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Siapkan jawaban untuk pertanyaan calon pembeli</span>
+              <span class="item__desc">Catat pertanyaan yang kemungkinan sering ditanyakan dan siapkan jawabannya.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c6-5" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Mulai tawarkan produk</span>
+              <span class="item__desc">Jangan menunggu semuanya sempurna. Kalau sudah cukup siap, mulai tawarkan.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+      <!-- KATEGORI 7 -->
+      <section class="category" data-category="7">
+        <div class="category__head">
+          <span class="category__icon">📊</span>
+          <div class="category__head-text">
+            <h2>Evaluasi &amp; Kembangkan</h2>
+            <p>Lihat hasilnya, lalu perbaiki pelan-pelan.</p>
+          </div>
+          <span class="category__count" data-category-count></span>
+        </div>
+
+        <div class="items">
+          <label class="item">
+            <input type="checkbox" id="c7-1" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Catat hasil penjualan</span>
+              <span class="item__desc">Catat berapa orang yang melihat, bertanya, membeli, atau belum membeli.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c7-2" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Lihat konten yang paling bagus</span>
+              <span class="item__desc">Perhatikan konten mana yang paling banyak mendapatkan perhatian atau interaksi.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c7-3" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Dengarkan feedback pembeli</span>
+              <span class="item__desc">Feedback dari pembeli bisa membantu kamu mengetahui apa yang perlu diperbaiki.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c7-4" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Perbaiki hal yang masih kurang</span>
+              <span class="item__desc">Nggak perlu mengubah semuanya sekaligus. Perbaiki satu bagian yang paling penting terlebih dahulu.</span>
+            </span>
+          </label>
+
+          <label class="item">
+            <input type="checkbox" id="c7-5" class="item__checkbox" />
+            <span class="item__box" aria-hidden="true"></span>
+            <span class="item__text">
+              <span class="item__title">Tentukan langkah berikutnya</span>
+              <span class="item__desc">Setelah melakukan evaluasi, tentukan satu langkah yang akan kamu lakukan selanjutnya.</span>
+            </span>
+          </label>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ==================== MOTIVASI ==================== -->
+    <section class="motivation">
+      <h2>Nggak harus sempurna untuk mulai.</h2>
+      <p>
+        Bisnis digital itu proses belajar. Kamu mungkin belum tahu semuanya
+        sekarang, dan itu nggak masalah. Mulai dari satu langkah kecil, coba,
+        lihat hasilnya, lalu perbaiki lagi.
+      </p>
+      <a href="#" class="btn btn--accent btn--lg">Mulai Jalankan Bisnismu 🚀</a>
+    </section>
+
+    <footer class="footer">
+      <p>Checklist Memulai Bisnis Digital — progres kamu tersimpan otomatis di perangkat ini.</p>
+    </footer>
+
+  </main>
+
+  <!-- ==================== MODAL KONFIRMASI RESET ==================== -->
+  <div class="modal-overlay" id="resetModal" hidden>
+    <div class="modal" role="alertdialog" aria-modal="true" aria-labelledby="resetModalTitle">
+      <h3 id="resetModalTitle">Yakin ingin menghapus semua progress?</h3>
+      <p>Semua checklist yang sudah kamu centang bakal balik ke awal lagi. Ini nggak bisa dibatalkan.</p>
+      <div class="modal__actions">
+        <button type="button" class="btn btn--ghost" id="resetCancelBtn">Batal</button>
+        <button type="button" class="btn btn--danger" id="resetConfirmBtn">Ya, Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
