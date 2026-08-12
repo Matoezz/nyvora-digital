@@ -1,0 +1,592 @@
+/* ===================================================================
+   MARKETING KIT
+   Dark, minimal, premium-but-friendly — sama keluarga desain dengan
+   Checklist Memulai Bisnis Digital. Aksen ungu-biru, minim gradient.
+=================================================================== */
+
+/* ---------------------------------------------------------------
+   1. RESET & TOKENS
+--------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg: #0A0B0F;
+  --bg-elevated: #14161C;
+  --bg-elevated-2: #1B1E26;
+  --border: #262A33;
+  --border-soft: #1E212A;
+
+  --text-primary: #F3F4F7;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+
+  --accent: #7C6FF0;
+  --accent-strong: #9285FF;
+  --accent-bg: rgba(124, 111, 240, 0.14);
+  --accent-border: rgba(124, 111, 240, 0.35);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 220ms;
+
+  --shell-width: 880px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+em { color: var(--text-primary); font-style: normal; font-weight: 600; }
+button, input, select { font-family: inherit; }
+button { cursor: pointer; border: none; background: none; color: inherit; }
+
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+::selection { background: var(--accent-bg); }
+
+/* ---------------------------------------------------------------
+   2. AMBIENT
+--------------------------------------------------------------- */
+.ambient { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.ambient__glow {
+  position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 500px;
+  background: radial-gradient(ellipse at center, rgba(124, 111, 240, 0.16), transparent 70%);
+}
+
+@media (max-width: 640px) { .ambient__glow { width: 600px; height: 340px; } }
+
+/* ---------------------------------------------------------------
+   3. SHELL & SECTIONS
+--------------------------------------------------------------- */
+.shell { max-width: var(--shell-width); margin: 0 auto; padding: 56px 20px 80px; }
+
+.section { margin-bottom: 64px; scroll-margin-top: 24px; }
+
+.section__title { font-size: clamp(21px, 3vw, 26px); margin-bottom: 12px; }
+.section__lead { font-size: 15px; color: var(--text-secondary); max-width: 620px; margin-bottom: 24px; line-height: 1.7; }
+.section__count { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------
+   4. HERO
+--------------------------------------------------------------- */
+.hero { text-align: center; margin-bottom: 72px; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em;
+  color: var(--accent-strong);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  padding: 6px 14px; border-radius: 999px; margin-bottom: 20px;
+}
+
+.badge i { width: 13px; height: 13px; }
+
+.hero__title { font-size: clamp(28px, 5vw, 44px); line-height: 1.15; margin-bottom: 16px; }
+.hero__subtitle { font-size: 16px; color: var(--text-secondary); max-width: 560px; margin: 0 auto 22px; }
+
+.meta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 30px; }
+.meta-row li { font-size: 12.5px; font-weight: 500; color: var(--text-secondary); background: var(--bg-elevated); border: 1px solid var(--border-soft); padding: 6px 12px; border-radius: 999px; }
+
+/* ---------------------------------------------------------------
+   5. BUTTONS
+--------------------------------------------------------------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 11px 20px; font-size: 13.5px; font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.btn i { width: 15px; height: 15px; }
+.btn:active { transform: scale(0.97); }
+
+.btn--accent { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+.btn--accent:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+
+.btn--ghost { background: transparent; color: var(--text-secondary); border: 1px solid var(--border); }
+.btn--ghost:hover { border-color: #3A3F4B; color: var(--text-primary); }
+
+.btn--lg { padding: 13px 26px; font-size: 14.5px; }
+
+/* ---------------------------------------------------------------
+   6. NOTE CARD ("Ingat:")
+--------------------------------------------------------------- */
+.note-card {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+
+.note-card__icon {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.06); color: var(--accent-strong);
+}
+
+.note-card__icon i { width: 17px; height: 17px; }
+.note-card strong { display: block; margin-bottom: 4px; font-size: 14px; }
+.note-card p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; }
+
+/* ---------------------------------------------------------------
+   7. GRID & GENERIC CARD
+--------------------------------------------------------------- */
+.grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+@media (min-width: 640px) {
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .grid--5 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .grid--5 { grid-template-columns: repeat(3, 1fr); }
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+}
+
+.card__label { font-size: 14.5px; margin-bottom: 16px; color: var(--text-primary); }
+
+/* Foundation cards (numbered) */
+.found-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.found-card__num {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px; font-weight: 700; color: var(--accent-strong);
+  margin-bottom: 12px;
+}
+
+.found-card h3 { font-size: 15.5px; margin-bottom: 8px; }
+.found-card p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 10px; }
+.found-card__example { display: block; font-size: 12.5px; color: var(--text-muted); font-style: italic; }
+
+/* Content-type cards */
+.type-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.type-card:hover { border-color: var(--accent-border); transform: translateY(-3px); }
+
+.type-card__icon {
+  width: 38px; height: 38px; border-radius: 11px;
+  background: var(--bg-elevated-2);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px; color: var(--accent-strong);
+}
+
+.type-card__icon i { width: 18px; height: 18px; }
+.type-card h3 { font-size: 15px; margin-bottom: 6px; }
+.type-card p { font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.55; }
+.type-card__example { display: block; font-size: 12.5px; color: var(--text-muted); font-style: italic; }
+
+/* ---------------------------------------------------------------
+   8. FORM ELEMENTS
+--------------------------------------------------------------- */
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.form__group { display: flex; flex-direction: column; gap: 6px; }
+
+.form__group label { font-size: 13px; font-weight: 600; color: var(--text-secondary); }
+
+.form__group input,
+.form__group select {
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: border-color var(--dur) var(--ease);
+}
+
+.form__group input::placeholder { color: var(--text-muted); }
+.form__group input:focus, .form__group select:focus { border-color: var(--accent); outline: none; }
+
+.form__group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.form__saved {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--accent-strong);
+  opacity: 0; transition: opacity var(--dur) var(--ease);
+}
+
+.form__saved.is-visible { opacity: 1; }
+.form__saved i { width: 15px; height: 15px; }
+.form__saved[hidden] { display: none; }
+
+/* ---------------------------------------------------------------
+   9. USP FORMULA
+--------------------------------------------------------------- */
+.formula-box {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formula-box p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.formula-box p span { color: var(--accent-strong); }
+
+.formula-box__example {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.result-box {
+  margin-top: 18px;
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.result-box p { font-size: 14.5px; line-height: 1.6; }
+
+/* ---------------------------------------------------------------
+   10. COPY BUTTON (dipakai berulang di banyak section)
+--------------------------------------------------------------- */
+.copy-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12.5px; font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+  align-self: flex-start;
+}
+
+.copy-btn i { width: 13px; height: 13px; }
+.copy-btn:hover { color: var(--text-primary); border-color: var(--accent-border); }
+.copy-btn.is-copied { color: var(--accent-strong); border-color: var(--accent-border); background: var(--accent-bg); }
+
+/* ---------------------------------------------------------------
+   11. CONTENT FORMULA (HOOK -> MASALAH -> SOLUSI -> CTA)
+--------------------------------------------------------------- */
+.formula-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.formula-step {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+}
+
+.formula-step__label {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+  color: var(--accent-strong);
+  background: var(--accent-bg);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.formula-step p { font-size: 13.5px; color: var(--text-secondary); margin-bottom: 6px; }
+.formula-step__example { font-size: 12.5px; color: var(--text-muted); font-style: italic; }
+
+.formula-arrow { text-align: center; color: var(--text-muted); font-size: 16px; }
+
+@media (min-width: 760px) {
+  .formula-steps { flex-direction: row; align-items: stretch; }
+  .formula-step { flex: 1; }
+  .formula-arrow { display: flex; align-items: center; }
+}
+
+/* ---------------------------------------------------------------
+   12. CAPTION CARDS
+--------------------------------------------------------------- */
+.caption-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.caption-card__tag {
+  align-self: flex-start;
+  font-size: 11.5px; font-weight: 700;
+  color: var(--accent-strong);
+  background: var(--accent-bg);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.caption-card__text {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* ---------------------------------------------------------------
+   13. CTA LIST
+--------------------------------------------------------------- */
+.cta-list { display: flex; flex-direction: column; gap: 10px; }
+
+.cta-list li {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.cta-list li span { font-size: 13.5px; color: var(--text-secondary); }
+
+@media (max-width: 560px) {
+  .cta-list li { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------------------------------------------------------------
+   14. CONTENT IDEA GENERATOR
+--------------------------------------------------------------- */
+.idea-results {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.idea-results[hidden] { display: none; }
+
+.idea-results li {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  animation: ideaIn 260ms var(--ease) both;
+}
+
+@keyframes ideaIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------------------
+   15. CHECKLIST GROUPS
+--------------------------------------------------------------- */
+.checklist-group {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+}
+
+.checklist-group h3 { font-size: 14.5px; margin-bottom: 12px; }
+
+.check-item {
+  position: relative;
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 9px 4px;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--dur) var(--ease);
+}
+
+.check-item input {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
+}
+
+.check-item__box {
+  flex-shrink: 0; width: 19px; height: 19px; margin-top: 1px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border);
+  background: var(--bg-elevated-2);
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.check-item__box::after {
+  content: '';
+  width: 9px; height: 7px;
+  clip-path: polygon(9% 45%, 34% 70%, 91% 10%, 100% 19%, 36% 90%, 0% 55%);
+  background: #fff;
+  transform: scale(0);
+  transition: transform 160ms var(--ease);
+}
+
+.check-item input:checked + .check-item__box { background: var(--accent); border-color: var(--accent); }
+.check-item input:checked + .check-item__box::after { transform: scale(1); }
+.check-item:has(input:checked) { color: var(--text-muted); text-decoration: line-through; text-decoration-color: var(--border); }
+
+/* ---------------------------------------------------------------
+   16. MARKETING PLAN TIMELINE
+--------------------------------------------------------------- */
+.timeline { display: flex; flex-direction: column; gap: 10px; }
+
+.timeline__day {
+  position: relative;
+  display: flex; align-items: center; gap: 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color var(--dur) var(--ease);
+}
+
+.timeline__day input { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.timeline__box {
+  flex-shrink: 0; width: 22px; height: 22px;
+  border-radius: 7px;
+  border: 1.5px solid var(--border);
+  background: var(--bg-elevated-2);
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.timeline__box::after {
+  content: '';
+  width: 11px; height: 8px;
+  clip-path: polygon(9% 45%, 34% 70%, 91% 10%, 100% 19%, 36% 90%, 0% 55%);
+  background: #fff;
+  transform: scale(0);
+  transition: transform 160ms var(--ease);
+}
+
+.timeline__day input:checked + .timeline__box { background: var(--accent); border-color: var(--accent); }
+.timeline__day input:checked + .timeline__box::after { transform: scale(1); }
+.timeline__day:has(input:checked) { border-color: var(--accent-border); }
+.timeline__day:has(input:checked) .timeline__text { color: var(--text-muted); text-decoration: line-through; text-decoration-color: var(--border); }
+
+.timeline__text { font-size: 13.5px; color: var(--text-secondary); transition: color var(--dur) var(--ease); }
+.timeline__text strong { color: var(--text-primary); font-weight: 600; }
+
+/* ---------------------------------------------------------------
+   17. PENUTUP
+--------------------------------------------------------------- */
+.closing {
+  text-align: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-lg);
+  padding: 40px 24px;
+  margin-bottom: 48px;
+}
+
+.closing h2 { font-size: 24px; margin-bottom: 14px; }
+.closing p { font-size: 14.5px; color: var(--text-secondary); max-width: 520px; margin: 0 auto 26px; line-height: 1.7; }
+
+/* ---------------------------------------------------------------
+   18. FOOTER
+--------------------------------------------------------------- */
+.footer { text-align: center; font-size: 12.5px; color: var(--text-muted); }
+
+/* ---------------------------------------------------------------
+   19. TOAST
+--------------------------------------------------------------- */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--accent-border);
+  color: var(--text-primary);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 999px;
+  box-shadow: 0 12px 32px -8px rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms var(--ease), transform 220ms var(--ease);
+  z-index: 200;
+}
+
+.toast.is-visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ---------------------------------------------------------------
+   20. ACCESSIBILITY
+--------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+   21. MOBILE REFINEMENTS
+--------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .shell { padding: 40px 16px 64px; }
+  .card, .found-card, .type-card, .caption-card, .checklist-group, .formula-box { padding: 16px; }
+  .closing { padding: 28px 18px; }
+  .btn { width: 100%; }
+  .hero .btn { width: auto; }
+  .cta-list li .copy-btn { align-self: stretch; justify-content: center; }
+}

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Kit — Toolkit Promosi untuk Pemula</title>
+  <meta name="description" content="Kumpulan panduan dan template siap pakai buat mulai memasarkan bisnis digital, cocok untuk pemula." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="ambient" aria-hidden="true"><div class="ambient__glow"></div></div>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <main class="shell">
+
+    <!-- ==================== 1. HERO ==================== -->
+    <header class="hero">
+      <span class="badge"><i data-lucide="megaphone"></i> MARKETING KIT</span>
+      <h1 class="hero__title">Biar Bisnismu Nggak Cuma Bagus, Tapi Juga Dikenal</h1>
+      <p class="hero__subtitle">
+        Kumpulan panduan dan template sederhana buat membantu kamu mulai
+        memasarkan bisnis digital tanpa harus bingung mau mulai dari mana.
+      </p>
+      <ul class="meta-row">
+        <li>Untuk pemula</li>
+        <li>Praktis</li>
+        <li>Bisa langsung dipakai</li>
+      </ul>
+      <a href="#pengantar" class="btn btn--accent btn--lg" id="heroCta">
+        Mulai Marketing <span aria-hidden="true">🚀</span>
+      </a>
+    </header>
+
+    <!-- ==================== 2. INTRODUCTION ==================== -->
+    <section class="section" id="pengantar">
+      <h2 class="section__title">Marketing itu sebenarnya apa sih?</h2>
+      <p class="section__lead">
+        Marketing bukan cuma soal jualan atau bikin iklan. Sederhananya,
+        marketing adalah cara kamu memperkenalkan produk ke orang yang
+        memang membutuhkannya, lalu membuat mereka tertarik untuk mengenal
+        dan membeli produk kamu.
+      </p>
+
+      <div class="note-card">
+        <span class="note-card__icon"><i data-lucide="lightbulb"></i></span>
+        <div>
+          <strong>Ingat:</strong>
+          <p>
+            Kamu nggak harus langsung jago marketing. Yang penting paham
+            siapa yang ingin kamu bantu, apa yang kamu tawarkan, dan
+            bagaimana cara menyampaikannya.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. MARKETING FOUNDATION ==================== -->
+    <section class="section" id="foundation">
+      <h2 class="section__title">Sebelum Mulai Promosi, Siapkan Ini Dulu</h2>
+
+      <div class="grid grid--4">
+        <article class="found-card">
+          <span class="found-card__num">01</span>
+          <h3>Kamu Jualan ke Siapa?</h3>
+          <p>Jangan mencoba menjual ke semua orang. Tentukan siapa yang paling mungkin membutuhkan produk kamu.</p>
+          <span class="found-card__example">Contoh: pelajar yang ingin mulai menghasilkan uang dari internet.</span>
+        </article>
+
+        <article class="found-card">
+          <span class="found-card__num">02</span>
+          <h3>Masalah Apa yang Mereka Punya?</h3>
+          <p>Cari tahu masalah, kebutuhan, atau keinginan yang sedang mereka alami.</p>
+          <span class="found-card__example">Contoh: bingung mulai bisnis digital dari mana.</span>
+        </article>
+
+        <article class="found-card">
+          <span class="found-card__num">03</span>
+          <h3>Produk Kamu Membantu Apa?</h3>
+          <p>Jelaskan bagaimana produk kamu bisa membantu mereka menyelesaikan masalah tersebut.</p>
+          <span class="found-card__example">Contoh: memberikan panduan dan resource yang membantu pemula memulai bisnis digital.</span>
+        </article>
+
+        <article class="found-card">
+          <span class="found-card__num">04</span>
+          <h3>Kenapa Mereka Harus Membeli?</h3>
+          <p>Jelaskan manfaat produk kamu dan alasan kenapa produk tersebut layak dipertimbangkan.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== 4. TARGET AUDIENCE TEMPLATE ==================== -->
+    <section class="section" id="audience">
+      <h2 class="section__title">Kenali Target Audiensmu</h2>
+      <p class="section__lead">Isi profil singkat ini biar kamu lebih kebayang mau ngomong ke siapa.</p>
+
+      <form class="card form" id="audienceForm">
+        <div class="form__group">
+          <label for="audTarget">Target utama</label>
+          <input type="text" id="audTarget" placeholder="Contoh: Pelajar SMA/SMK" autocomplete="off" />
+        </div>
+
+        <div class="form__group">
+          <label for="audUmur">Umur</label>
+          <input type="text" id="audUmur" placeholder="Contoh: 16–20 tahun" autocomplete="off" />
+        </div>
+
+        <div class="form__group">
+          <label for="audMasalah">Masalah utama mereka</label>
+          <input type="text" id="audMasalah" placeholder="Contoh: Bingung mencari cara mendapatkan penghasilan online" autocomplete="off" />
+        </div>
+
+        <div class="form__group">
+          <label for="audKeinginan">Apa yang mereka inginkan?</label>
+          <input type="text" id="audKeinginan" placeholder="Contoh: Punya penghasilan tambahan" autocomplete="off" />
+        </div>
+
+        <div class="form__group">
+          <label for="audPlatform">Di mana mereka biasanya aktif?</label>
+          <input type="text" id="audPlatform" placeholder="Instagram, TikTok, YouTube, dll." autocomplete="off" />
+        </div>
+
+        <button type="submit" class="btn btn--accent">
+          <i data-lucide="save"></i> Simpan Profil Audiens
+        </button>
+        <p class="form__saved" id="audienceSavedNote" hidden><i data-lucide="check-circle-2"></i> Tersimpan di perangkat ini</p>
+      </form>
+    </section>
+
+    <!-- ==================== 5. USP / VALUE PROPOSITION ==================== -->
+    <section class="section" id="usp">
+      <h2 class="section__title">Bikin Orang Paham Kenapa Produkmu Layak Dipilih</h2>
+      <p class="section__lead">
+        USP atau <em>Unique Selling Proposition</em> (alasan kenapa produkmu beda dan layak dipilih)
+        sebenarnya nggak serumit namanya. Intinya, kamu perlu punya alasan
+        yang jelas kenapa orang harus memilih produk kamu.
+      </p>
+
+      <div class="formula-box">
+        <p>Saya membantu <span>[TARGET]</span> mendapatkan <span>[HASIL]</span> melalui <span>[PRODUK / CARA]</span>.</p>
+        <span class="formula-box__example">"Saya membantu pelajar yang ingin mulai bisnis digital mendapatkan panduan dan resource yang mereka butuhkan tanpa harus mencari semuanya dari nol."</span>
+      </div>
+
+      <div class="card">
+        <h3 class="card__label">Template USP</h3>
+
+        <div class="form__group">
+          <label for="uspTarget">Saya membantu...</label>
+          <input type="text" id="uspTarget" placeholder="Contoh: pelajar yang ingin mulai bisnis digital" />
+        </div>
+        <div class="form__group">
+          <label for="uspHasil">Untuk mendapatkan...</label>
+          <input type="text" id="uspHasil" placeholder="Contoh: panduan dan resource yang mereka butuhkan" />
+        </div>
+        <div class="form__group">
+          <label for="uspCara">Dengan cara...</label>
+          <input type="text" id="uspCara" placeholder="Contoh: tanpa harus mencari semuanya dari nol" />
+        </div>
+
+        <button type="button" class="btn btn--accent" id="uspGenerateBtn">
+          <i data-lucide="sparkles"></i> Buat Kalimat USP
+        </button>
+
+        <div class="result-box" id="uspResult" hidden>
+          <p id="uspResultText"></p>
+          <button type="button" class="copy-btn" data-copy-target="#uspResultText">
+            <i data-lucide="copy"></i> Copy
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. CONTENT MARKETING ==================== -->
+    <section class="section" id="content-types">
+      <h2 class="section__title">Konten yang Bisa Kamu Buat</h2>
+      <p class="section__lead">
+        Kamu nggak perlu setiap hari mikirin ide konten dari nol. Coba
+        gunakan beberapa jenis konten ini dan sesuaikan dengan bisnis kamu.
+      </p>
+
+      <div class="grid grid--5">
+        <article class="type-card">
+          <span class="type-card__icon"><i data-lucide="graduation-cap"></i></span>
+          <h3>Edukasi</h3>
+          <p>Kasih informasi yang membantu audiens memahami sesuatu.</p>
+          <span class="type-card__example">"5 kesalahan pemula saat mulai bisnis digital."</span>
+        </article>
+
+        <article class="type-card">
+          <span class="type-card__icon"><i data-lucide="alert-circle"></i></span>
+          <h3>Problem</h3>
+          <p>Bahas masalah yang sering dialami target audiens.</p>
+          <span class="type-card__example">"Udah posting tapi nggak ada yang beli?"</span>
+        </article>
+
+        <article class="type-card">
+          <span class="type-card__icon"><i data-lucide="lightbulb"></i></span>
+          <h3>Tips</h3>
+          <p>Bagikan tips sederhana yang bisa langsung dicoba.</p>
+          <span class="type-card__example">"3 cara mencari ide produk digital."</span>
+        </article>
+
+        <article class="type-card">
+          <span class="type-card__icon"><i data-lucide="book-open"></i></span>
+          <h3>Story</h3>
+          <p>Ceritakan pengalaman, proses, atau perjalanan kamu.</p>
+          <span class="type-card__example">"Kenapa saya mulai membangun bisnis digital."</span>
+        </article>
+
+        <article class="type-card">
+          <span class="type-card__icon"><i data-lucide="gift"></i></span>
+          <h3>Promotion</h3>
+          <p>Kenalkan produk dan jelaskan manfaatnya.</p>
+          <span class="type-card__example">"Ini yang kamu dapatkan kalau menggunakan Starter Pack Bisnis Digital."</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CONTENT FORMULA ==================== -->
+    <section class="section" id="formula">
+      <h2 class="section__title">Formula Konten Simpel</h2>
+
+      <div class="formula-steps">
+        <div class="formula-step">
+          <span class="formula-step__label">HOOK</span>
+          <p>Kalimat pertama yang bikin orang berhenti scroll.</p>
+          <span class="formula-step__example">"Masih bingung mulai bisnis digital dari mana?"</span>
+        </div>
+        <div class="formula-arrow" aria-hidden="true">→</div>
+        <div class="formula-step">
+          <span class="formula-step__label">MASALAH</span>
+          <p>Jelaskan masalah yang kemungkinan sedang mereka alami.</p>
+        </div>
+        <div class="formula-arrow" aria-hidden="true">→</div>
+        <div class="formula-step">
+          <span class="formula-step__label">SOLUSI</span>
+          <p>Berikan tips, informasi, atau solusi yang relevan.</p>
+        </div>
+        <div class="formula-arrow" aria-hidden="true">→</div>
+        <div class="formula-step">
+          <span class="formula-step__label">CTA</span>
+          <p>Beritahu mereka harus melakukan apa selanjutnya.</p>
+          <span class="formula-step__example">"Kalau mau mulai lebih terarah, cek link di bio."</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn--ghost" id="copyFormulaBtn">
+        <i data-lucide="copy"></i> Salin Formula
+      </button>
+    </section>
+
+    <!-- ==================== 8. TEMPLATE CAPTION ==================== -->
+    <section class="section" id="captions">
+      <h2 class="section__title">Template Caption Siap Pakai</h2>
+
+      <div class="grid grid--3">
+        <article class="caption-card">
+          <span class="caption-card__tag">Edukasi</span>
+          <p class="caption-card__text" id="caption1">Masih sering bingung mulai bisnis digital dari mana? 🤔
+
+Banyak pemula stuck di tahap ini karena nyoba semuanya sekaligus, padahal yang perlu dilakukan cuma satu: fokus dulu ke satu produk atau satu ide.
+
+Coba deh, tulis satu ide bisnis yang paling kamu kuasai, terus mulai dari situ aja dulu.
+
+Kalau butuh panduan lebih lengkap, cek link di bio ya 🚀</p>
+          <button type="button" class="copy-btn" data-copy-target="#caption1"><i data-lucide="copy"></i> Copy Caption</button>
+        </article>
+
+        <article class="caption-card">
+          <span class="caption-card__tag">Soft Selling</span>
+          <p class="caption-card__text" id="caption2">Dulu aku juga bingung banget mau mulai bisnis digital dari mana. Coba sana-sini, tapi nggak jelas arahnya.
+
+Sampai akhirnya sadar, yang aku butuh sebenarnya cuma panduan yang jelas dan nggak bikin tambah pusing.
+
+Makanya sekarang aku bikinin panduan itu buat kamu yang lagi di posisi yang sama — biar nggak perlu buang waktu kayak aku dulu.
+
+Kepoin dulu aja, nggak rugi kok 😊</p>
+          <button type="button" class="copy-btn" data-copy-target="#caption2"><i data-lucide="copy"></i> Copy Caption</button>
+        </article>
+
+        <article class="caption-card">
+          <span class="caption-card__tag">Hard Selling</span>
+          <p class="caption-card__text" id="caption3">Masih bingung mulai bisnis digital dari nol? Ini solusinya.
+
+Starter Pack Bisnis Digital ngasih kamu panduan step-by-step, template siap pakai, dan bonus yang langsung bisa kamu praktikkan — tanpa perlu cari-cari lagi dari berbagai sumber.
+
+Yang kamu dapetin: panduan lengkap, template konten, dan akses seumur hidup.
+
+Klik link di bio buat mulai sekarang 🚀</p>
+          <button type="button" class="copy-btn" data-copy-target="#caption3"><i data-lucide="copy"></i> Copy Caption</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== 9. CTA KIT ==================== -->
+    <section class="section" id="cta-kit">
+      <h2 class="section__title">Kumpulan CTA</h2>
+      <p class="section__lead">
+        CTA atau <em>Call To Action</em> (ajakan bertindak) adalah ajakan
+        sederhana yang memberi tahu audiens apa yang harus mereka lakukan
+        setelah melihat konten kamu.
+      </p>
+
+      <ul class="cta-list">
+        <li>
+          <span>Cek link di bio untuk info lengkap.</span>
+          <button type="button" class="copy-btn" data-copy="Cek link di bio untuk info lengkap."><i data-lucide="copy"></i> Copy</button>
+        </li>
+        <li>
+          <span>Kalau kamu tertarik, langsung cek produknya.</span>
+          <button type="button" class="copy-btn" data-copy="Kalau kamu tertarik, langsung cek produknya."><i data-lucide="copy"></i> Copy</button>
+        </li>
+        <li>
+          <span>Mau mulai juga? Kamu bisa lihat detailnya di sini.</span>
+          <button type="button" class="copy-btn" data-copy="Mau mulai juga? Kamu bisa lihat detailnya di sini."><i data-lucide="copy"></i> Copy</button>
+        </li>
+        <li>
+          <span>Simpan postingan ini kalau kamu merasa bakal membutuhkannya nanti.</span>
+          <button type="button" class="copy-btn" data-copy="Simpan postingan ini kalau kamu merasa bakal membutuhkannya nanti."><i data-lucide="copy"></i> Copy</button>
+        </li>
+        <li>
+          <span>Kalau masih bingung, kamu bisa mulai dari panduan ini.</span>
+          <button type="button" class="copy-btn" data-copy="Kalau masih bingung, kamu bisa mulai dari panduan ini."><i data-lucide="copy"></i> Copy</button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ==================== 10. CONTENT IDEA GENERATOR ==================== -->
+    <section class="section" id="generator">
+      <h2 class="section__title">Content Idea Generator</h2>
+      <p class="section__lead">Bingung mau bikin konten apa? Isi topik bisnismu, pilih jenis kontennya, langsung dapat beberapa ide.</p>
+
+      <div class="card">
+        <div class="form__group">
+          <label for="ideaTopic">Topik bisnis kamu</label>
+          <input type="text" id="ideaTopic" placeholder="Contoh: produk digital" />
+        </div>
+
+        <div class="form__group">
+          <label for="ideaType">Jenis konten</label>
+          <select id="ideaType">
+            <option value="edukasi">Edukasi</option>
+            <option value="tips">Tips</option>
+            <option value="problem">Problem</option>
+            <option value="story">Story</option>
+            <option value="promosi">Promosi</option>
+          </select>
+        </div>
+
+        <button type="button" class="btn btn--accent" id="ideaGenerateBtn">
+          <i data-lucide="wand-2"></i> Buat Ide Konten
+        </button>
+
+        <ul class="idea-results" id="ideaResults" hidden></ul>
+      </div>
+    </section>
+
+    <!-- ==================== 11. MARKETING CHECKLIST ==================== -->
+    <section class="section" id="checklist">
+      <h2 class="section__title">Marketing Checklist</h2>
+      <p class="section__count" id="checklistCount">0 / 15 selesai</p>
+
+      <div class="grid grid--3">
+        <div class="checklist-group">
+          <h3>Sebelum Promosi</h3>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="pre-1" /><span class="check-item__box"></span>Sudah tahu target audiens</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="pre-2" /><span class="check-item__box"></span>Sudah tahu masalah mereka</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="pre-3" /><span class="check-item__box"></span>Sudah punya penawaran</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="pre-4" /><span class="check-item__box"></span>Sudah menentukan manfaat produk</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="pre-5" /><span class="check-item__box"></span>Sudah menyiapkan CTA</label>
+        </div>
+
+        <div class="checklist-group">
+          <h3>Saat Promosi</h3>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="during-1" /><span class="check-item__box"></span>Buat konten edukasi</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="during-2" /><span class="check-item__box"></span>Buat konten problem</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="during-3" /><span class="check-item__box"></span>Buat konten tips</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="during-4" /><span class="check-item__box"></span>Buat konten promosi</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="during-5" /><span class="check-item__box"></span>Arahkan audiens ke produk</label>
+        </div>
+
+        <div class="checklist-group">
+          <h3>Setelah Promosi</h3>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="after-1" /><span class="check-item__box"></span>Lihat performa konten</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="after-2" /><span class="check-item__box"></span>Catat pertanyaan audiens</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="after-3" /><span class="check-item__box"></span>Perhatikan konten yang paling menarik</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="after-4" /><span class="check-item__box"></span>Evaluasi penawaran</label>
+          <label class="check-item"><input type="checkbox" data-group="checklist" id="after-5" /><span class="check-item__box"></span>Perbaiki strategi</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 12. MARKETING PLAN 7 HARI ==================== -->
+    <section class="section" id="plan7">
+      <h2 class="section__title">Marketing Plan 7 Hari</h2>
+      <p class="section__count" id="planCount">0 / 7 hari selesai</p>
+
+      <div class="timeline">
+        <label class="timeline__day">
+          <input type="checkbox" data-group="plan7" id="day-1" />
+          <span class="timeline__box"></span>
+          <span class="timeline__text"><strong>Hari 1</strong> — Kenali target audiens.</span>
+        </label>
+        <label class="timeline__day">
+          <input type="checkbox" data-group="plan7" id="day-2" />
+          <span class="timeline__box"></span>
+          <span class="timeline__text"><strong>Hari 2</strong> — Cari masalah dan kebutuhan mereka.</span>
+        </label>
+        <label class="timeline__day">
+          <input type="checkbox" data-group="plan7" id="day-3" />
+          <span class="timeline__box"></span>
+          <span class="timeline__text"><strong>Hari 3</strong> — Buat konten edukasi.</span>
+        </label>
+        <label class="timeline__day">
+          <input type="checkbox" data-group="plan7" id="day-4" />
+          <span class="timeline__box"></span>
+          <span class="timeline__text"><strong>Hari 4</strong> — Buat konten problem + solusi.</span>
+        </label>
+        <label class="timeline__day">
+          <input type="checkbox" data-group="plan7" id="day-5" />
+          <span class="timeline__box"></span>
+          <span class="timeline__text"><strong>Hari 5</strong> — Buat konten soft selling.</span>
+        </label>
+        <label class="timeline__day">
+          <input type="checkbox" data-group="plan7" id="day-6" />
+          <span class="timeline__box"></span>
+          <span class="timeline__text"><strong>Hari 6</strong> — Promosikan produk.</span>
+        </label>
+        <label class="timeline__day">
+          <input type="checkbox" data-group="plan7" id="day-7" />
+          <span class="timeline__box"></span>
+          <span class="timeline__text"><strong>Hari 7</strong> — Lihat hasil dan evaluasi.</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- ==================== 13. PENUTUP ==================== -->
+    <section class="closing">
+      <h2>Nggak perlu langsung sempurna. Yang penting mulai.</h2>
+      <p>
+        Marketing itu bukan sesuatu yang langsung kamu kuasai dalam satu
+        hari. Coba dulu, lihat respon orang, pelajari apa yang berhasil,
+        lalu perbaiki lagi. Semakin sering kamu praktik, semakin kamu
+        ngerti cara memasarkan produkmu.
+      </p>
+      <a href="#" class="btn btn--accent btn--lg">Mulai Promosi Sekarang 🚀</a>
+    </section>
+
+    <footer class="footer">
+      <p>Marketing Kit — progres dan datamu tersimpan otomatis di perangkat ini.</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
