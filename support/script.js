@@ -189,6 +189,66 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* -----------------------------------------------------------
+     6c. FORM KRITIK & SARAN — susun pesan lalu buka Gmail
+     (situs statis tanpa backend, jadi pengiriman akhir tetap
+     lewat Gmail; form ini hanya membantu menyusun emailnya)
+  ----------------------------------------------------------- */
+  const feedbackForm = document.getElementById('feedbackForm');
+
+  if (feedbackForm) {
+    const nameInput = document.getElementById('feedbackName');
+    const messageInput = document.getElementById('feedbackMessage');
+    const messageRow = messageInput.closest('.feedback-form__row');
+    const errorEl = document.getElementById('feedbackError');
+    const successEl = document.getElementById('feedbackSuccess');
+    const FEEDBACK_EMAIL = 'nyvoradigital@gmail.com'; // email tujuan kritik & saran
+
+    feedbackForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = nameInput.value.trim();
+      const message = messageInput.value.trim();
+
+      if (!message) {
+        messageRow.classList.add('has-error');
+        errorEl.hidden = false;
+        messageInput.focus();
+        successEl.hidden = true;
+        return;
+      }
+
+      messageRow.classList.remove('has-error');
+      errorEl.hidden = true;
+
+      const subject = 'Kritik & Saran — Member Area Nyvora Digital';
+      const bodyParts = [
+        'Halo admin Nyvora Digital, saya ingin memberikan kritik/saran:',
+        '',
+        message,
+        '',
+        name ? `Dari: ${name}` : 'Dari: Member (tanpa nama)',
+      ];
+
+      const subjectParam = encodeURIComponent(subject);
+      const bodyParam = encodeURIComponent(bodyParts.join('\n'));
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${FEEDBACK_EMAIL}&su=${subjectParam}&body=${bodyParam}`;
+
+      window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+
+      successEl.hidden = false;
+      feedbackForm.reset();
+    });
+
+    // Sembunyikan pesan error/sukses begitu user mulai mengetik ulang
+    messageInput.addEventListener('input', () => {
+      if (messageInput.value.trim()) {
+        messageRow.classList.remove('has-error');
+        errorEl.hidden = true;
+      }
+      successEl.hidden = true;
+    });
+  }
+  /* -----------------------------------------------------------
      7. RIPPLE BUTTON ANIMATION
   ----------------------------------------------------------- */
   document.querySelectorAll('.ripple').forEach((btn) => {
